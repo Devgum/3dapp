@@ -21,6 +21,7 @@
     <!-- <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> -->
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5b09a8cf4e.js" crossorigin="anonymous"></script>
+    <!-- X3Dom -->
     <script src="js/x3dom-full.js"></script>
     <link href="css/x3dom.css">
     <!-- Custom CSS -->
@@ -52,7 +53,7 @@
           <!-- Reference: https://stackoverflow.com/questions/63948287/bootstrap-5-navbar-align-items-right-->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -63,9 +64,9 @@
                 Drinks
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="coke.html">Coca Cola</a></li>
-                <li><a class="dropdown-item" href="sprite.html">Sprite</a></li>
-                <li><a class="dropdown-item" href="pepper.html">Dr Pepper</a></li>
+                <li><a class="dropdown-item" href="#">Coca Cola</a></li>
+                <li><a class="dropdown-item" href="#">Sprite</a></li>
+                <li><a class="dropdown-item" href="#">Dr Pepper</a></li>
               </ul>
             </li>
 
@@ -79,7 +80,20 @@
 
     <!-- Main Content -->
     <div class="container mt-5 main_contents">
+      <!-- <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div id="main_3d_image">
+            <div id="main_text" class="col-xs-12 col-sm-4">
+              <h2>Coca Cola Great Britain</h2>
+              <h3>Founded in 1886 by pharmacist Dr John S Pemberton in Atlanta, Georgia</h3>
+              <p>The Coca-Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <div class="row">
+        <!-- X3D Model -->
         <div class="col-sm-10">
           <div class="card text-left">
             <div class="card-header">
@@ -87,35 +101,72 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="coke.html">Coke</a>
                 </li>
-                <li>
-                  <a class="nav-link active" href="sprite.html">Sprite</a>
-                </li> 
-                <li>
-                  <a class="nav-link active" href="sprite.html">Pepper</a>
-                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="sprite.html">Sprite</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pepper.html">Pepper</a>
+                </li>
               </ul>
             </div>
+
+            <div class="model3D">
+              <x3d width="100%" height="100%">
+                <scene>
+                  <inline url="https://users.sussex.ac.uk/~rz232/3dapp/labs/models/coke/coke_can.x3d"/>
+                </scene>
+              </x3d>
+            </div>
+
             <div class="card-body">
-              <div id="main_3d_image"></div>
+              <p class="card-text">This X3D model of the Coca Cola Bottle has been created in 3ds Max, exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.</p>
+              <h5 class="card-title">Camera Views</h4>
+              <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary btn-responsive camera-font">Front</a>
+                <a href="#" class="btn btn-secondary btn-responsive camera-font">Back</a>
+                <a href="#" class="btn btn-success btn-responsive camera-font">Left</a>
+                <a href="#" class="btn btn-danger btn-responsive camera-font">Right</a>
+                <a href="#" class="btn btn-warning btn-responsive camera-font">Top</a>
+                <a href="#" class="btn btn-outline-dark btn-responsive camera-font">Off</a>
+              </div>
             </div>
           </div>
+
         </div>
+        <!-- Image Gallery -->
         <div class="col-sm-2">
           <div class="card text-left">
-            <div class="card-body">
-              <div> Insert image gallery code here</div>
+            <div class="card-header">
+              3D Image Gallery
             </div>
+            <a href="coke.html">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+            </a>
+            <a href="sprite.html">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Coca Cola">
+            </a>
+            <a href="pepper.html">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Coca Cola">
+            </a>
+            <p class="card-text">3D images rendered in 3ds Max 2017 with Mental Ray</p>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-xs-12 col-sm-12">
-          <x3d width='720px' height='640px'>
-            <scene>
-              <inline url="https://users.sussex.ac.uk/~rz232/3dapp/labs/models/coke/coke_can.x3d"></inline>
-            </scene>
-          </x3d>
-        </div> 
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">History of Coca Cola: 1886-1892</h3>
+              <p class="card-text">
+                Atlanta Beginnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled.
+Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.
+              </p>
+              <a href="#" class="btn btn-primary">Find out more...</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

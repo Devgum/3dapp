@@ -15,7 +15,7 @@
 
 /* X-Small devices */
 body {
-    background-color: rgb(239, 252, 255);
+    background-color: rgb(218, 216, 148);
 }
 
 .main_contents {
@@ -72,37 +72,13 @@ h1, h2, h3, h4, h5, h6 {
     /* border-radius: .25rem;*/
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(239, 252, 255);
+    background-color: rgb(218, 216, 148);
 }
 
 .card-text {
     font-size: 13px;
 }
 
-/* Small Devices */
-@media (min-width: 576px) {
-    .footer {
-        background-color: #257600;
-        height: 60px;
-    }
-
-    .navbar-text > a {
-        font-size: 10px;
-    }
-
-    .navbar-text > p {
-        color: rgb(228, 75, 15);
-        font-size: 18px;
-    }
-
-    .copyright {
-        padding-top: 20px;
-    }
-
-    .social {
-        padding-top: 7px;
-    }
-}
 
 .logo {
     margin-top: 3px;
@@ -224,6 +200,24 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #760003;
+    background-color: #3399ff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.nav-tabs .nav-link:hover {
+    color: green;
+    border: 1px solid transparent;
+}
+
 .copyright {
     padding-top: 8px
 }
@@ -232,6 +226,93 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0px;
 }
 
+.img-thumbnail {
+    padding: 0.25rem;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.camera-btns {
+    /* background-color: rgba(0, 0, 255, 0.3); */
+    border-color: black;
+    border-style: solid;
+    border-width: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.camera-btns > p {
+    font-size: 15px;
+    color: red;
+    padding-left: 0px;
+    font-weight: 900;
+}
+.camera-font {
+    font-weight: 400;
+    color: white;
+}
+.camera-font:hover {
+    font-weight: 700;
+    color: rgb(3, 3, 3);
+}
+.btn-responsive {
+    padding: 6px 10px;
+    font-size: 90%;
+    line-height: 1.2;
+    white-space: normal !important;
+}
+
+.gallery-header {
+    color: white;
+}
+
+.gallery-header:hover {
+    color: green;
+    border: 1px solid transparent;
+}
+
+.model3D {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 1.0);
+    padding: 2px;
+    height: 200px;
+}
+
+X3D, x3d {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 1.0);
+    width: 100%;
+    height: 100%
+}
+
+/* Small Devices */
+@media (min-width: 576px) {
+    .footer {
+        background-color: #257600;
+        height: 60px;
+    }
+
+    .navbar-text > a {
+        font-size: 10px;
+    }
+
+    .navbar-text > p {
+        color: rgb(228, 75, 15);
+        font-size: 18px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+}
 
 /* Medium Devices */
 @media (min-width: 768px) {
@@ -240,7 +321,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Large Devices */
 @media (min-width: 992px) {
-
+    .model3D {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 1.0);
+        padding: 2px;
+        height: 360px;
+    }
 }
 
 /* X-Large Devices */
