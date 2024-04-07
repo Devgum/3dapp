@@ -15,6 +15,7 @@
                     groundColor="0.051 0.051 0.051"
                     skyColor="0.051 0.051 0.051"
                     />
+        <Viewpoint position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="defaultX3DViewpointNode"/>
         <Transform DEF="Can_TRANSFORM"
                    translation="0.000000 0.000000 0.000000"
                    scale="1.000000 1.000000 1.000000"
