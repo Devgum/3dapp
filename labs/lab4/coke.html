@@ -114,6 +114,13 @@
               <x3d width="100%" height="100%">
                 <scene>
                   <inline url="../models/coke/coke_can.x3d"/>
+                    <Viewpoint id="default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
+                    <Viewpoint id="front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
+                    <Viewpoint id="left" position="-1.02501 0.08851 1.15144" orientation="-0.07896 -0.99670 -0.01858 0.72935" zNear="0.76420" zFar="2.59211" description="left camera"/>
+                    <Viewpoint id="right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
+                    <Viewpoint id="back" position="-0.98709 -0.02549 -1.18715" orientation="-0.00292 0.99996 -0.00827 3.83521" zNear="0.76420" zFar="2.59211" description="back camera"/>
+                    <Viewpoint id="top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
+                    <Viewpoint id="bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
                 </scene>
               </x3d>
             </div>
@@ -123,12 +130,12 @@
               <h5 class="card-title">Camera Views</h4>
               <p class="card-text">These buttons select a range of X3D model viewpoints</p>
               <div class="btn-group">
-                <a href="#" class="btn btn-primary btn-responsive camera-font">Front</a>
-                <a href="#" class="btn btn-secondary btn-responsive camera-font">Back</a>
-                <a href="#" class="btn btn-success btn-responsive camera-font">Left</a>
-                <a href="#" class="btn btn-danger btn-responsive camera-font">Right</a>
-                <a href="#" class="btn btn-warning btn-responsive camera-font">Top</a>
-                <a href="#" class="btn btn-outline-dark btn-responsive camera-font">Off</a>
+                <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('front').setAttribute('set_bind','true');">Front</a>
+                <a href="#" class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('back').setAttribute('set_bind','true');">Back</a>
+                <a href="#" class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('left').setAttribute('set_bind','true');">Left</a>
+                <a href="#" class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('right').setAttribute('set_bind','true');">Right</a>
+                <a href="#" class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('top').setAttribute('set_bind','true');">Top</a>
+                <a href="#" class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('default').setAttribute('set_bind','true');">Off</a>
               </div>
             </div>
           </div>
