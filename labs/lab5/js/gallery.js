@@ -1,5 +1,5 @@
 var xmlHttp = new XMLHttpRequest();
-var numberOfColumns = 4;
+var numberOfColumns = 2;
 var htmlCode = "";
 var response;
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
             for (var i=0; i<response.length; i++) {
                 htmlCode += '<td id="gallery_cell">';
                 htmlCode += '<a href="' + response[i] +  '">';
-                htmlCode += '<img src="' + response[i] + '" id="image_thumbnail"/>';
+                htmlCode += '<img src="' + response[i] + '" class="img_thumbnail"/>';
                 htmlCode += '</a>';
                 htmlCode += '</td>';
 
