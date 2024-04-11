@@ -1,6 +1,8 @@
 <?php
-
 $directory = 'gallery';
+if (isset($_GET['gallery_type'])) {
+    $directory .= '/'.$_GET['gallery_type'];
+}
 $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
 $file_parts = array();
 $response = '';
