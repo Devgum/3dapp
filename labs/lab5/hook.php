@@ -8,7 +8,7 @@ $dir_handle = opendir($directory);
 while ($file = readdir($dir_handle)) {
     if (substr($file, 0, 1) != '.') {
         $file_components = explode('.', $file);
-        $extension = str2lower(array_pop($file_components));
+        $extension = strtolower(array_pop($file_components));
         if (in_array($extension, $allowed_extensions)) {
             $response .= $directory.'/'.$file.';';
         }
