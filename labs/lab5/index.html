@@ -27,6 +27,7 @@
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
     <script src="js/custom.js"></script>
+    <script src="js/gallery.js"></script>
   </head>
   <body>
     <!-- Navbar Part -->
@@ -109,7 +110,7 @@
         </div>
         <div class="col-sm-4">
           <div class="card">
-            <a href="#">
+            <a href="javascript:swap('sprite')">
               <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
             </a>
             <div class="card-body">
@@ -123,7 +124,7 @@
         </div>
         <div class="col-sm-4">
           <div class="card">
-            <a href="#">
+            <a href="javascript:swap('pepper')">
               <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
             </a>
             <div class="card-body">
@@ -190,7 +191,7 @@
         </div>
         <!-- Image Gallery -->
         <div class="col-sm-2">
-          <div class="card text-left">
+          <div id='gallery' class="card text-left">
             <div class="card-header">
               3D Image Gallery
             </div>
