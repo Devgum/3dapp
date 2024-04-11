@@ -13,7 +13,7 @@ $(document).ready(function() {
             htmlCode += '<tr>';
             for (var i=0; i<response.length; i++) {
                 htmlCode += '<td id="gallery_cell">';
-                htmlCode += '<a href="' + 'gallery/' + response[i] +  '" id="image_thumbnail"/>';
+                htmlCode += '<a href="' + response[i] +  '" id="image_thumbnail"/>';
                 htmlCode += '</a>';
                 htmlCode += '</td>';
 
