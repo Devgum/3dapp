@@ -1,6 +1,6 @@
 <?php
 
-$directory = 'assets/gallery';
+$directory = 'gallery';
 $allowed_extensions = array('jpg', 'jpeg', 'gif', 'png');
 $file_parts = array();
 $response = '';
