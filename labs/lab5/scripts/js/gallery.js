@@ -4,7 +4,7 @@ var htmlCode = "";
 var response;
 
 function gallery(gallery_type) {
-    var url = "hook.php";
+    var url = "scripts/php/hook.php";
     var params = "gallery_type=" + gallery_type;
     var send = url + "?" + params
     xmlHttp.open("GET", send, true);
