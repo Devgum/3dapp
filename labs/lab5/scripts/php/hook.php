@@ -1,5 +1,5 @@
 <?php
-$directory = 'gallery';
+$directory = '../../gallery';
 if (isset($_GET['gallery_type'])) {
     $directory .= '/'.$_GET['gallery_type'];
 }
