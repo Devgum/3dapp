@@ -1,5 +1,4 @@
 var xmlHttp = new XMLHttpRequest();
-var numberOfColumns = 2;
 var htmlCode = "";
 var response;
 
