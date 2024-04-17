@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     /* border-radius: .25rem;*/
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(218, 216, 148);
+    background-color: rgba(218, 216, 148, 0);
 }
 
 .card-text {
