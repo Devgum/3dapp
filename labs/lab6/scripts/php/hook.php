@@ -1,6 +1,6 @@
 <?php
 $base_directory = '../../';
-$gallery_directory = 'gallery';
+$gallery_directory = 'assets/gallery';
 if (isset($_GET['gallery_type'])) {
     $gallery_directory .= '/'.$_GET['gallery_type'];
 }

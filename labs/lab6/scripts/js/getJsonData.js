@@ -1,0 +1,26 @@
+function generateHtmlContent(tag, content) {
+    tag_start = '<' + tag + '>';
+    tag_end = '</' + tag + '>';
+    return tag_start + content + tag_end;
+}
+
+$(document).ready(function() {
+    $.getJSON('./data/data.json', function(jsonObj) {
+        console.log(jsonObj);
+        $('#title_home').html(generateHtmlContent('h2', jsonObj.pageTextData[0].title));
+        $('#subtitle_home').html(generateHtmlContent('h3', jsonObj.pageTextData[0].subtitle));
+        $('#description_home').html(generateHtmlContent('p', jsonObj.pageTextData[0].subtitle));
+
+        $('#title_left').html(generateHtmlContent('h2', jsonObj.pageTextData[1].title));
+        $('#subtitle_left').html(generateHtmlContent('h3', jsonObj.pageTextData[1].subtitle));
+        $('#description_left').html(generateHtmlContent('p', jsonObj.pageTextData[1].subtitle));
+
+        $('#title_centre').html(generateHtmlContent('h2', jsonObj.pageTextData[2].title));
+        $('#subtitle_centre').html(generateHtmlContent('h3', jsonObj.pageTextData[2].subtitle));
+        $('#description_centre').html(generateHtmlContent('p', jsonObj.pageTextData[2].subtitle));
+
+        $('#title_left').html(generateHtmlContent('h2', jsonObj.pageTextData[3].title));
+        $('#subtitle_left').html(generateHtmlContent('h3', jsonObj.pageTextData[3].subtitle));
+        $('#description_left').html(generateHtmlContent('p', jsonObj.pageTextData[3].subtitle));
+    });
+});
