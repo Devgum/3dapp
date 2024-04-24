@@ -19,8 +19,8 @@ $(document).ready(function() {
         $('#subtitle_centre').html(generateHtmlContent('h3', jsonObj.pageTextData[2].subtitle));
         $('#description_centre').html(generateHtmlContent('p', jsonObj.pageTextData[2].description));
 
-        $('#title_left').html(generateHtmlContent('h2', jsonObj.pageTextData[3].title));
-        $('#subtitle_left').html(generateHtmlContent('h3', jsonObj.pageTextData[3].subtitle));
-        $('#description_left').html(generateHtmlContent('p', jsonObj.pageTextData[3].description));
+        $('#title_right').html(generateHtmlContent('h2', jsonObj.pageTextData[3].title));
+        $('#subtitle_right').html(generateHtmlContent('h3', jsonObj.pageTextData[3].subtitle));
+        $('#description_right').html(generateHtmlContent('p', jsonObj.pageTextData[3].description));
     });
 });
