@@ -103,10 +103,10 @@
                 <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
               </a>
               <div class="card-body">
-                <div id="title_left"></div>
-                <div id="subtitle_left"></div>
-                <div id="description_left"></div>
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_left" class="card-title"></div>
+                <div id="subtitle_left" class="card-text"></div>
+                <div id="description_left" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>
@@ -116,10 +116,10 @@
                 <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
               </a>
               <div class="card-body">
-                <div id="title_centre"></div>
-                <div id="subtitle_centre"></div>
-                <div id="description_centre"></div>
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_centre" class="card-title"></div>
+                <div id="subtitle_centre" class="card-text"></div>
+                <div id="description_centre" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/sprite" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>
@@ -129,10 +129,10 @@
                 <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
               </a>
               <div class="card-body">
-                <div id="title_right"></div>
-                <div id="subtitle_right"></div>
-                <div id="description_right"></div>
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_right" class="card-title"></div>
+                <div id="subtitle_right" class="card-text"></div>
+                <div id="description_right" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/dr-pepper" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>
@@ -162,28 +162,28 @@
                 <x3d width="100%" height="100%">
                   <scene>
                     <inline url="../models/coke/coke_can.x3d"/>
-                      <Viewpoint id="front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
-                      <Viewpoint id="left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
-                      <Viewpoint id="right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
-                      <Viewpoint id="back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
-                      <Viewpoint id="top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
-                      <Viewpoint id="bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
-                      <Viewpoint id="default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
+                      <Viewpoint id="coke_front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
+                      <Viewpoint id="coke_left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
+                      <Viewpoint id="coke_right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
+                      <Viewpoint id="coke_back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
+                      <Viewpoint id="coke_top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
+                      <Viewpoint id="coke_bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
+                      <Viewpoint id="coke_default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
                   </scene>
                 </x3d>
               </div>
 
               <div class="card-body">
-                <p class="card-text">This X3D model of the Coca Cola Bottle has been created in 3ds Max, exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.</p>
-                <h5 class="card-title">Camera Views</h4>
-                <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                <div id="model_description_coke" class="card-text"></div>
+                <div class="card-title camera_title"></div>
+                <div class="card-text camera_description"></div>
                 <div class="btn-group">
-                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('front').setAttribute('set_bind','true');">Front</a>
-                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('back').setAttribute('set_bind','true');">Back</a>
-                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('left').setAttribute('set_bind','true');">Left</a>
-                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('right').setAttribute('set_bind','true');">Right</a>
-                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('top').setAttribute('set_bind','true');">Top</a>
-                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('default').setAttribute('set_bind','true');">Off</a>
+                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('coke_front').setAttribute('set_bind','true');">Front</a>
+                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('coke_back').setAttribute('set_bind','true');">Back</a>
+                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('coke_left').setAttribute('set_bind','true');">Left</a>
+                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('coke_right').setAttribute('set_bind','true');">Right</a>
+                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('coke_top').setAttribute('set_bind','true');">Top</a>
+                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('coke_default').setAttribute('set_bind','true');">Off</a>
                 </div>
               </div>
             </div>
@@ -205,11 +205,10 @@
           <div class="col-xs-12 col-sm-12">
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title">History of Coca Cola: 1886-1892</h3>
-                <p class="card-text">
-                  Atlanta Beginnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.
-                </p>
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_left_bottom" class="card-title"></div>
+                <div id="subtitle_left_bottom" class="card-text"></div>
+                <div id="description_left_bottom" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>
@@ -239,28 +238,28 @@
                 <x3d width="100%" height="100%">
                   <scene>
                     <inline url="../models/coke/coke_can.x3d"/>
-                      <Viewpoint id="front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
-                      <Viewpoint id="left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
-                      <Viewpoint id="right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
-                      <Viewpoint id="back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
-                      <Viewpoint id="top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
-                      <Viewpoint id="bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
-                      <Viewpoint id="default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
+                      <Viewpoint id="sprite_front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
+                      <Viewpoint id="sprite_left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
+                      <Viewpoint id="sprite_right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
+                      <Viewpoint id="sprite_back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
+                      <Viewpoint id="sprite_top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
+                      <Viewpoint id="sprite_bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
+                      <Viewpoint id="sprite_default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
                   </scene>
                 </x3d>
               </div>
 
               <div class="card-body">
-                <p class="card-text">This X3D model of the Coca Cola Bottle has been created in 3ds Max, exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.</p>
-                <h5 class="card-title">Camera Views</h4>
-                <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                <div id="model_description_sprite" class="card-text"></div>
+                <div class="card-title camera_title"></div>
+                <div class="card-text camera_description"></div>
                 <div class="btn-group">
-                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('front').setAttribute('set_bind','true');">Front</a>
-                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('back').setAttribute('set_bind','true');">Back</a>
-                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('left').setAttribute('set_bind','true');">Left</a>
-                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('right').setAttribute('set_bind','true');">Right</a>
-                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('top').setAttribute('set_bind','true');">Top</a>
-                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('default').setAttribute('set_bind','true');">Off</a>
+                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('sprite_front').setAttribute('set_bind','true');">Front</a>
+                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('sprite_back').setAttribute('set_bind','true');">Back</a>
+                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('sprite_left').setAttribute('set_bind','true');">Left</a>
+                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('sprite_right').setAttribute('set_bind','true');">Right</a>
+                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('sprite_top').setAttribute('set_bind','true');">Top</a>
+                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('sprite_default').setAttribute('set_bind','true');">Off</a>
                 </div>
               </div>
             </div>
@@ -282,8 +281,10 @@
           <div class="col-xs-12 col-sm-12">
             <div class="card">
               <div class="card-body">
-                Sprite content
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_centre_bottom" class="card-title"></div>
+                <div id="subtitle_centre_bottom" class="card-text"></div>
+                <div id="description_centre_bottom" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/sprite" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>
@@ -313,28 +314,28 @@
                 <x3d width="100%" height="100%">
                   <scene>
                     <inline url="../models/coke/coke_can.x3d"/>
-                      <Viewpoint id="front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
-                      <Viewpoint id="left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
-                      <Viewpoint id="right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
-                      <Viewpoint id="back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
-                      <Viewpoint id="top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
-                      <Viewpoint id="bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
-                      <Viewpoint id="default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
+                      <Viewpoint id="pepper_front" position="1.52697 0.19608 -0.11927" orientation="-0.05438 0.99623 0.06752 1.65306" zNear="0.76420" zFar="2.59211" description="front camera"/>
+                      <Viewpoint id="pepper_left" position="0.63950 0.03621 1.40501" orientation="-0.06167 0.99782 -0.02363 0.42786" zNear="0.76420" zFar="2.59211" description="left camera"/>
+                      <Viewpoint id="pepper_right" position="-1.12163 0.04221 -1.06042" orientation="0.00604 0.99989 0.01361 3.95496" zNear="0.76420" zFar="2.59211" description="right camera"/>
+                      <Viewpoint id="pepper_back" position="-1.03582 0.12909 1.13785" orientation="-0.10907 -0.99332 -0.03757 0.74288" zNear="0.76420" zFar="2.59211" description="back camera"/>
+                      <Viewpoint id="pepper_top" position="-0.01691 1.54348 -0.04138" orientation="0.29928 0.68529 0.66394 3.72203" zNear="0.76420" zFar="2.59211" description="top camera"/>
+                      <Viewpoint id="pepper_bottom"position="0.04211 -1.66676 0.06189" orientation="0.32277 -0.65260 0.68551 2.52624" zNear="0.76420" zFar="2.59211" description="bottom camera"/>
+                      <Viewpoint id="pepper_default" position="1.20052 0.96823 0.07484" orientation="-0.59506 0.80255 0.04266 1.52405" zNear="0.76420" zFar="2.59211" description="default camera"/>
                   </scene>
                 </x3d>
               </div>
 
               <div class="card-body">
-                <p class="card-text">This X3D model of the Coca Cola Bottle has been created in 3ds Max, exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.</p>
-                <h5 class="card-title">Camera Views</h4>
-                <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                <div id="model_description_pepper" class="card-text"></div>
+                <div class="card-title camera_title"></div>
+                <div class="card-text camera_description"></div>
                 <div class="btn-group">
-                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('front').setAttribute('set_bind','true');">Front</a>
-                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('back').setAttribute('set_bind','true');">Back</a>
-                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('left').setAttribute('set_bind','true');">Left</a>
-                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('right').setAttribute('set_bind','true');">Right</a>
-                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('top').setAttribute('set_bind','true');">Top</a>
-                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('default').setAttribute('set_bind','true');">Off</a>
+                  <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('pepper_front').setAttribute('set_bind','true');">Front</a>
+                  <a class="btn btn-secondary btn-responsive camera-font" onclick="document.getElementById('pepper_back').setAttribute('set_bind','true');">Back</a>
+                  <a class="btn btn-success btn-responsive camera-font" onclick="document.getElementById('pepper_left').setAttribute('set_bind','true');">Left</a>
+                  <a class="btn btn-danger btn-responsive camera-font" onclick="document.getElementById('pepper_right').setAttribute('set_bind','true');">Right</a>
+                  <a class="btn btn-warning btn-responsive camera-font" onclick="document.getElementById('pepper_top').setAttribute('set_bind','true');">Top</a>
+                  <a class="btn btn-outline-dark btn-responsive camera-font" onclick="document.getElementById('pepper_default').setAttribute('set_bind','true');">Off</a>
                 </div>
               </div>
             </div>
@@ -356,8 +357,10 @@
           <div class="col-xs-12 col-sm-12">
             <div class="card">
               <div class="card-body">
-                Pepper Content
-                <a href="#" class="btn btn-primary">Find out more...</a>
+                <div id="title_right_bottom" class="card-title"></div>
+                <div id="subtitle_right_bottom" class="card-text"></div>
+                <div id="description_right_bottom" class="card-text"></div>
+                <a href="https://www.coca-cola.com/gb/en/brands/dr-pepper" class="btn btn-primary">Find out more...</a>
               </div>
             </div>
           </div>

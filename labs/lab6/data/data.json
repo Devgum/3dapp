@@ -19,6 +19,13 @@
             "title": "Dr Pepper",
             "subtitle": "Texas, 1885",
             "description": "Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since."
+        },
+        {
+            "model_description": "This X3D model of the Coca Cola Can has been created in Blender, exported to X3D and modified manually for display online."
+        },
+        {
+            "camera_title": "Camera Views",
+            "camera_description": "These buttons select a range of X3D model viewpoints"
         }
     ]
 }
