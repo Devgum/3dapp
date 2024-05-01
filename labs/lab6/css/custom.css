@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .model3D {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 1.0);
     padding: 2px;
@@ -301,6 +301,7 @@ X3D, x3d {
     border: 1px solid rgba(255, 0, 0, 1.0);
     width: 100%;
     height: 100%
+    background-color: rgba(255, 255, 255, 0);
 }
 
 /* Small Devices */
