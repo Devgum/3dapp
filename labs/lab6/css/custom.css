@@ -344,10 +344,6 @@ X3D, x3d {
 /* Large Devices */
 @media (min-width: 992px) {
     .model3D {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-        border: 1px solid rgba(0, 0, 0, 1.0);
-        padding: 2px;
         height: 360px;
     }
 }
