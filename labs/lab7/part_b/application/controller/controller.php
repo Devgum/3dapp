@@ -37,21 +37,5 @@ class Controller {
         $data = $this->model->dbGetData();
         $this->load->view('view3DAppData', $data);
     }  
-    
-    function dbCreateTable()
-    {
-        echo "Create Table Function";
-    }
-
-    function dbInsertData()
-    {
-        echo "Data Insert Function";
-    }
-
-    function dbGetData()
-    {
-        echo "Data Read Function";
-    }
-
 }
 ?>    
