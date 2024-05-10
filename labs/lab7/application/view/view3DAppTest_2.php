@@ -41,27 +41,27 @@
     <p>If you are seeing the test Model 3D Image Data below, then your basic MVC framework is working </p>
     <div class="box">
         <h2><?php echo $model_1 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_1?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_1?>.png'>
     </div>
     <div class="box">
         <h2><?php echo $model_2 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_2 ?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_2 ?>.png'>
     </div>
     <div class="box">
         <h2><?php echo $model_3 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_3 ?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_3 ?>.png'>
     </div>
     <div class="box">
         <h2><?php echo $model_4 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_4 ?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_4 ?>.png'>
     </div>
     <div class="box">
         <h2><?php echo $model_5 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_5 ?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_5 ?>.png'>
     </div>
     <div class="box">
         <h2><?php echo $model_6 ?></h2>
-        <img class="imgBox" src='../assets/images/gallery_images/<?php echo $image3D_6 ?>.png'>
+        <img class="imgBox" src='../assets/images/gallery/<?php echo $image3D_6 ?>.png'>
     </div>
 
 </body>
