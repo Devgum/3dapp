@@ -31,7 +31,7 @@
             padding: 5px;
             float: left;
             margin: 5px;
-            height: 280px;
+            /*height: 280px;*/
         }
     </style>
 
