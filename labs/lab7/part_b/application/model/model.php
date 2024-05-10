@@ -20,7 +20,7 @@ class Model {
             // echo 'Database connection created</br></br>';
         }
         catch (PDOEXception $e) {
-            echo "Failed while connecting to the database!";
+            echo "Failed while connecting to the database!<br>";
             // Generate an error message if the connection fails
             print new Exception($e->getMessage());
         }
@@ -33,6 +33,7 @@ class Model {
             return "Model_3D table is successfully created inside database.db file";
         }
         catch (PD0EXception $e){
+            echo "Failed while creating database<br>";
             print new Exception($e->getMessage());
         }
         $this->dbhandle = NULL;
