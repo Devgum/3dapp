@@ -5,7 +5,7 @@ class Controller {
     // Declare public variables for the controller class
     public $load;
     public $model;
-    
+
     // Create functions for the controller class
     function __construct($pageURI = null) // constructor of the class
     {
@@ -31,11 +31,11 @@ class Controller {
     {
         $data = $this->model->dbInsertData();
         $this->load->view('viewMessage', $data);
-    }  
+    }
     function apiGetData()
     {
         $data = $this->model->dbGetData();
         $this->load->view('view3DAppData', $data);
-    }  
+    }
 }
-?>    
+?>

@@ -2,7 +2,7 @@
 class Model {
     // Property declaration, in this case we are declaring a variable or handeler that points to the database connection, this will become a PDO object
     public $dbhandle;
-    
+
     // Method to create database connection using PHP Data Objects (PDO) as the interface to SQLite
     public function __construct()
     {
@@ -25,7 +25,7 @@ class Model {
             print new Exception($e->getMessage());
         }
     }
-    
+
     public function dbCreateTable()
     {
         try {
@@ -38,7 +38,7 @@ class Model {
         }
         $this->dbhandle = NULL;
     }
-    
+
     public function dbInsertData()
     {
         try{
