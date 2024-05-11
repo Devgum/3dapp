@@ -12,6 +12,9 @@
 <body>
     <h1> Flickr Web Service</h1>
   <h2> Search on Flickr Feed</h2>
+  <?php
+    echo "Current Direction: " . getcwd() . "<br>";
+  ?>
   <!-- Text input box -->
   <div class="textInput">
     <input type="text" value="Sprite" id="txt" />
@@ -30,7 +33,7 @@
       <div id="images"></div>
   </div>
 
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="../application/js/flickrService.js"></script>
   
 </body>
