@@ -6,7 +6,7 @@
     <title>Test View — Flickr Web Service</title>  
 
   <!-- FlickrService CSS -->
-  <link rel="stylesheet" href="../application/css/flickrService.css">
+  <link rel="stylesheet" href="application/css/flickrService.css">
 
 </head>
 <body>

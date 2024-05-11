@@ -11,7 +11,7 @@
      // alert(txt);
      // console.log(txt);
      // Create a URI for the Flickr web service API call
-     var urlFlickr = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+     var urlFlickr = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
      // Use the JQuery .getJson() method to fetch the JSON object back from the Flickr web service
      $.getJSON(urlFlickr, {
          tags: txt,
