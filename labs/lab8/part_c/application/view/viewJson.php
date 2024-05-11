@@ -8,7 +8,7 @@
 
     <div id="placeholder"></div>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
     // Use a relative path so that it works on the ITS Web Server 
     $.getJSON('../application/model/createJson.php', function(data) {
