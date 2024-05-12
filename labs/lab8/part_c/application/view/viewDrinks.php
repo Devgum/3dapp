@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8">
  <title>Drinks Image View</title>
- <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script src="https://code.jquery.com/jquery-latest.js"></script>
 
 </head>
 <body>
