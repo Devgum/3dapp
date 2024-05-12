@@ -54,7 +54,7 @@ class Controller {
     function apiLoadImage()
     {
        // Get the brand data from the (this) Model using the dbGetBrand() meyhod in this Model class    
-       ChromePhp::warn('controller.php: [apiLoadImage] Get the Brand data');    
+       // ChromePhp::warn('controller.php: [apiLoadImage] Get the Brand data');    
        $data = $this->model->dbGetBrand();
        // Note, the viewDrinks.php view being loaded here calls a new model
        // called modelDrinkDetails.php, which is not part of the Model class
