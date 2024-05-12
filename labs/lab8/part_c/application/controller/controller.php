@@ -59,7 +59,7 @@ class Controller {
        // Note, the viewDrinks.php view being loaded here calls a new model
        // called modelDrinkDetails.php, which is not part of the Model class
        // It is a separate model illustrating that you can have many models
-       ChromePhp::log($data);  
+       // ChromePhp::log($data);  
        $this->load->view('viewDrinks', $data);
     }
     
