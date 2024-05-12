@@ -1,4 +1,7 @@
 <?php
+include './debug/ChromePhp.php';
+ChromePhp::log('controller.php: Hello World');
+ChromePhp::log($_SERVER);   
 // Create the controller class for the MVC design pattern
 class Controller {
 
@@ -54,12 +57,12 @@ class Controller {
     function apiLoadImage()
     {
        // Get the brand data from the (this) Model using the dbGetBrand() meyhod in this Model class    
-       // ChromePhp::warn('controller.php: [apiLoadImage] Get the Brand data');    
+       ChromePhp::warn('controller.php: [apiLoadImage] Get the Brand data');    
        $data = $this->model->dbGetBrand();
        // Note, the viewDrinks.php view being loaded here calls a new model
        // called modelDrinkDetails.php, which is not part of the Model class
        // It is a separate model illustrating that you can have many models
-       // ChromePhp::log($data);  
+       ChromePhp::log($data);  
        $this->load->view('viewDrinks', $data);
     }
     
