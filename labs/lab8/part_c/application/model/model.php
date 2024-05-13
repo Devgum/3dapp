@@ -36,7 +36,7 @@ class Model {
         // Return the Brand Names
         $sql = "SELECT brand FROM {$this->tableName}";
         try {
-            $stmt = $this->dbhandle->execute($sql);
+            $stmt = $this->dbhandle->query($sql);
             $result = [];
             $i = 0;
             while ($data = $stmt->fetch()) {
