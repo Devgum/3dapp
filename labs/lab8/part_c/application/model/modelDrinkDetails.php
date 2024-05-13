@@ -7,12 +7,12 @@
         ChromePhp::warn('modelDrinkDetails.php: Get Brand details');    
         $brandName = $_GET['brand'];
         
-        ChromePhp::warn('modelDrinkDetails.php: Make a connection to test1.db');    
+        ChromePhp::warn('modelDrinkDetails.php: Make a connection to database.db');    
         // Connect to the database table and retrieve the required brand data
         try {
 
             // Set up database connectionm parameters
-            $dsn = 'sqlite:../../db/test1.db';
+            $dsn = 'sqlite:../../db/database.db';
             $user = 'user';
             $pass = 'password';
             ChromePhp::warn($dsn, $user, $pass);
@@ -23,7 +23,7 @@
             
             // Make a connection to the drinks database
             $dbhandle = new PDO($dsn, $user, $pass, $options);
-            ChromePhp::warn('modelDrinkDetails.php: Connected to test1.db');    
+            ChromePhp::warn('modelDrinkDetails.php: Connected to database.db');    
 
             // Prepare a SQL statement to select a record matching the brand name selected in the view drop-down list
             ChromePhp::warn('modelDrinkDetails.php: Prepare PDO SQL statement');
@@ -45,7 +45,7 @@
             // Use PDO fetchall() the results from the database using a while loop
             // Use a while loop to loop through the table rows — there may be more than one record with the same brand name
             while ($data = $stmt->fetch()) {
-                ChromePhp::warn('modelDrinkDetails.php:PDO fetch() data from test1.db');
+                ChromePhp::warn('modelDrinkDetails.php:PDO fetch() data from database.db');
                 ChromePhp::warn($data);
                 // Write the database contents to the results array for sending back to the view
                 $result[$i]['brand'] = $data['brand'];
@@ -57,11 +57,11 @@
                 
                 // increment the row index
                 $i++;
-                ChromePhp::warn('modelDrinkDetails.php: Here is the test1.db data');
+                ChromePhp::warn('modelDrinkDetails.php: Here is the database.db data');
                 ChromePhp::warn($result);
             }
         }
-        catch (PDOEXception $e) {
+        catch (PDOException $e) {
             ChromePhp::warn('modelDrinkDetails.php: Code error on server?');    
             print new Exception($e->getMessage());
         }

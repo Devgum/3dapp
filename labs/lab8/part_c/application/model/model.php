@@ -2,13 +2,12 @@
 class Model {
     // Property declaration, in this case we are declaring a variable or handeler that points to the database connection, this will become a PDO object
     public $dbhandle;
+    private $dsn = 'sqlite:../db/database.db';
+    private $tableName = 'Model_3D';
 
     // Method to create database connection using PHP Data Objects (PDO) as the interface to SQLite
     public function __construct()
-    {
-        // Set up the database source name (DSN)
-        $dsn = 'sqlite:./db/database.db';
-        
+    {        
         $user = 'user';
         $pass = 'password';
         $options = [
@@ -16,14 +15,14 @@ class Model {
             PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
         ];
         // Then create a connection to a database with the PDO() function
-        try {   
+        try {
             // Change connection string for different databases, currently using SQLite
-            $this->dbhandle = new PDO($dsn, $user, $pass, $options);
+            $this->dbhandle = new PDO(this->$dsn, $user, $pass, $options);
             // $this->dbhandle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo 'Database connection created</br></br>';
-        }
-        catch (PDOEXception $e) {
-            echo "I'm sorry, Martin. I'm afraid I can't connect to the database!";
+        
+        catch (PDOException $e) {
+            echo "Failed to connect to the database!<br>";
             // Generate an error message if the connection fails
             print new Exception($e->getMessage());
         }
@@ -38,13 +37,26 @@ class Model {
         return array("-", "Coke", "Sprite", "Dr Pepper");
     }
 
+    public function tableExists() {
+        $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
+        try {
+            $stmt = $this->$dbhandle->prepare($sql);
+            $stmt->exec([':tableName' => this->$tableName]);
+            $tableExists = $stmt->fetchColumn() > 0;
+            return $tableExists;
+        } catch (PDOException){
+            print new Exception($e->getMessage());
+        }
+        $this->dbhandle = NULL;
+    }
+
     public function dbCreateTable()
     {
         try {
-            $this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
+            $this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
             return "Model_3D table is successfully created inside database.db file";
         }
-        catch (PD0EXception $e){
+        catch (PDOException $e){
             echo "Failed while creating database<br>";
             print new Exception($e->getMessage());
         }
