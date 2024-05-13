@@ -34,11 +34,9 @@ class Model {
     public function dbGetBrand()
     {
         // Return the Brand Names
-        $result = [];
-        $sql = "SELECT brand FROM :tableName";
+        $sql = "SELECT brand FROM {$this->tableName}";
         try {
-            $stmt = $this->dbhandle->prepare($sql);
-            $stmt->execute([':tableName' => $this->tableName]);
+            $stmt = $this->dbhandle->execute($sql);
             $result = [];
             $i = 0;
             while ($data = $stmt->fetch()) {
