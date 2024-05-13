@@ -24,7 +24,7 @@ class Model {
         catch (PDOException $e) {
             echo "Failed to connect to the database!<br>";
             // Generate an error message if the connection fails
-            print new Exception($e->getMessage());
+            echo "Database error: " . $e->getMessage();
         }
     }
 
@@ -37,28 +37,31 @@ class Model {
         $sql = "SELECT brand FROM :tableName";
         try {
             $stmt = $this->dbhandle->prepare($sql);
-            $stmt->exec([':tableName' => $this->tableName]);
-            $result = array();
+            $stmt->execute([':tableName' => $this->tableName]);
+            $result = [];
+            $i = 0;
             while ($data = $stmt->fetch()) {
-
+                result[$i] = $data['brand'];
+                $i++;
             }
         } catch (PDOException $e){
-            print new Exception($e->getMessage());
+            echo "Database error: " . $e->getMessage();
+        } finally {
+            $this->dbhandle = NULL;
         }
-        $this->dbhandle = NULL;
+        return $result;
     }
 
     public function tableExists() {
         $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
         try {
             $stmt = $this->dbhandle->prepare($sql);
-            $stmt->exec([':tableName' => $this->tableName]);
+            $stmt->execute([':tableName' => $this->tableName]);
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
         } catch (PDOException $e){
-            print new Exception($e->getMessage());
+            echo "Database error: " . $e->getMessage();
         }
-        $this->dbhandle = NULL;
     }
 
     public function dbCreateTable()
@@ -72,9 +75,10 @@ class Model {
         }
         catch (PDOException $e){
             echo "Failed while creating database<br>";
-            print new Exception($e->getMessage());
+            echo "Database error: " . $e->getMessage();
+        } finally {
+            $this->dbhandle = NULL;
         }
-        $this->dbhandle = NULL;
     }
 
     public function dbInsertData()
@@ -89,10 +93,11 @@ class Model {
                 VALUES (3, 'Dr Pepper', 'X3D Dr Pepper Model', 'string_2', 'string_3','string_4','string_5'); ");
             return "X3D model data inserted successfully inside database.db";
         }
-        catch(PD0EXception $e) {
-            print new Exception($e->getMessage());
+        catch(PDOException $e) {
+            echo "Database error: " . $e->getMessage();
+        } finally {
+            $this->dbhandle = NULL;
         }
-        $this->dbhandle = NULL;
     }
 
     public function dbGetData(){
@@ -120,11 +125,11 @@ class Model {
                 $i++;
             }
         }
-        catch (PD0EXception $e) {
-            print new Exception($e->getMessage());
+        catch (PDOException $e) {
+            echo "Database error: " . $e->getMessage();
+        } finally {
+            $this->dbhandle = NULL;
         }
-        // Close the database connection
-        $this->dbhandle = NULL;
         // Send the response back to the view
         return $result;
     }
