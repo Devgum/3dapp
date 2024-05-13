@@ -34,7 +34,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="../application/js/flickrService.js"></script>
+  <script src="application/js/flickrService.js"></script>
   
 </body>
 </html>
