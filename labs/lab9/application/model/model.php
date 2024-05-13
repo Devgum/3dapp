@@ -25,7 +25,7 @@ class Model {
             $this->x3dTableName => X3DInfo::class,
             $this->textTableName => Text::class,
             $this->imageTableName => Image::class,
-        ]
+        ];
     }
 
     public function connect_database() {
