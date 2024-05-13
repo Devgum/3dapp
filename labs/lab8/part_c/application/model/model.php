@@ -2,12 +2,12 @@
 class Model {
     // Property declaration, in this case we are declaring a variable or handeler that points to the database connection, this will become a PDO object
     public $dbhandle;
-    private $dsn = 'sqlite:../db/database.db';
+    private $dsn = 'sqlite:./db/database.db';
     private $tableName = 'Model_3D';
 
     // Method to create database connection using PHP Data Objects (PDO) as the interface to SQLite
     public function __construct()
-    {        
+    {
         $user = 'user';
         $pass = 'password';
         $options = [
@@ -34,7 +34,18 @@ class Model {
     public function dbGetBrand()
     {
         // Return the Brand Names
-        return array("-", "Coke", "Sprite", "Dr Pepper");
+        $sql = "SELECT brand FROM :tableName";
+        try {
+            $stmt = $this->dbhandle->prepare($sql);
+            $stmt->exec([':tableName' => $this->tableName]);
+            $result = array();
+            while ($data = $stmt->fetch()) {
+
+            }
+        } catch (PDOException $e){
+            print new Exception($e->getMessage());
+        }
+        $this->dbhandle = NULL;
     }
 
     public function tableExists() {
