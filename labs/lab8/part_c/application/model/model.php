@@ -20,7 +20,7 @@ class Model {
             $this->dbhandle = new PDO($this->$dsn, $user, $pass, $options);
             // $this->dbhandle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo 'Database connection created</br></br>';
-        
+        }
         catch (PDOException $e) {
             echo "Failed to connect to the database!<br>";
             // Generate an error message if the connection fails
