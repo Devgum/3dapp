@@ -73,10 +73,28 @@ class Model {
         return $result;
     }
 
+    private function tableCreationSQL($tableName) {
+        $result = 'CREATE TABLE '.$tableName;
+        $tableClass = $this->tables[$tableName];
+        $i = 0;
+        $column_list = [];
+        foreach ($tableClass::$columns as $name => $type) {
+            $column = "$name $type";
+            if ($i == $tableClass::$primary_key) {
+                $column." PRIMARY KEY"
+            }
+            $column_list[$i] = $column;
+            $i++;
+        }
+        $result = $result.'('.implode(',', column_list).')';
+        return $result;
+    }
+
     public function createTable($tableName) {
+        $sql = this->tableCreationSQL($tableName);
         try {
             $this->connect_database();
-            
+            $this->dbhandle->exec($sql);
         } catch (PDOException $e) {
             echo "createTable Failed. <br>";
             echo "Database Error: <br>". $e->getMessage();

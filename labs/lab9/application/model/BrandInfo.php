@@ -1,13 +1,15 @@
 <?php
-class BrandInfo {
+include './application/model/BaseDAO.php';
+
+class BrandInfo extends BaseDAO {
     public static $primary_key = 0;
 
-    public static $tpyes = [
-        "INTEGER",
-        "TEXT",
-        "INTEGER",
-        "INTEGER",
-        "INTEGER",
+    public static $columns = [
+        'id' => 'INTEGER',
+        'name' => 'TEXT',
+        'x3d_id' => 'INTEGER',
+        'text_id' => 'INTEGER',
+        'image_id' => 'INTEGER'
     ]
 
     public $id;

@@ -1,11 +1,13 @@
 <?php
-class Image {
+include './application/model/BaseDAO.php';
+
+class Image extends BaseDAO {
     public static $primary_key = 0;
 
-    public static $tpyes = [
-        "INTEGER",
-        "TEXT",
-        "TEXT",
+    public static $columns = [
+        'id' => 'INTEGER',
+        'gallery_path' => 'TEXT',
+        'render_path' => 'TEXT',
     ]
 
     public $id;
