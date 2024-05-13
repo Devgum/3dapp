@@ -70,12 +70,11 @@ class Model {
     }
 
     public function doGetBrand() {
-        $sql = "SELECT name FROM :tableName";
+        $sql = "SELECT name FROM {$this->brandTableName}";
         $result = [];
         try {
             $this->connect_database();
-            $stmt = $this->dbhandle->prepare($sql);
-            $stmt->execute([':tableName' => $this->brandTableName]);
+            $stmt = $this->dbhandle->query($sql);
             $i = 0;
             while ($data = $stmt->fetch()) {
                 $result[$i] = $data['name'];
