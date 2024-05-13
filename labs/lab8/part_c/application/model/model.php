@@ -63,6 +63,9 @@ class Model {
 
     public function dbCreateTable()
     {
+        if ($this->tableExists()) {
+            return "Model_3D table aleady exists."
+        }
         try {
             $this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
             return "Model_3D table is successfully created inside database.db file";
