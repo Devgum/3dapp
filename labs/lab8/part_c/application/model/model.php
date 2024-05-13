@@ -41,7 +41,7 @@ class Model {
             $result = [];
             $i = 0;
             while ($data = $stmt->fetch()) {
-                result[$i] = $data['brand'];
+                $result[$i] = $data['brand'];
                 $i++;
             }
         } catch (PDOException $e){
