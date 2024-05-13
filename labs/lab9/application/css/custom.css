@@ -1,16 +1,16 @@
 @font-face {
     font-family: lokicola;
-    src: url(../assets/fonts/LOKICOLA.TTF);
+    src: url(./application/fonts/LOKICOLA.TTF);
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(../assets/fonts/OpenSans-Regular.ttf);
+    src: url(./application/fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
     font-family: Oswald;
-    src: url(../assets/fonts/Oswald-Regular.ttf);
+    src: url(./application/fonts/Oswald-Regular.ttf);
 }
 
 /* X-Small devices */
@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main_3d_image {
-    background-image: url(../assets/images/main_3D.jpg);
+    background-image: url(./assets/images/main_3D.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
@@ -329,7 +329,7 @@ X3D, x3d {
     }
 
     #main_3d_image {
-        background-image: url(../assets/images/main_3D.jpg);
+        background-image: url(./assets/images/main_3D.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 400px;
