@@ -89,6 +89,14 @@ class Model {
         return $result;
     }
 
+    public function homePageData() {
+        
+    }
+
+    public function modelPageData($brandName) {
+        
+    }
+
     private function tableCreationSQL($tableName) {
         $result = 'CREATE TABLE '.$tableName;
         $tableClass = $this->tables[$tableName];
