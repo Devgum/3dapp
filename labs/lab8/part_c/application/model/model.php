@@ -83,7 +83,7 @@ class Model {
 
     public function dbInsertData()
     {
-        if (!$this->tableExists) {
+        if (!$this->tableExists()) {
             return "Model_3D table does not exists.";
         }
         try{
