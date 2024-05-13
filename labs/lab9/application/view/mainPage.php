@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php include './application/view/navbar.php'?>
-    <div id='content'>
+    <div id='content'></div>
     <?php include './application/view/footer.php'?>
     <!-- Scripts -->
     <!-- Placing scripts at tail of the body can reduce the lag caused by the scripts loading-->
