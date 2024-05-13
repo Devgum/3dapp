@@ -36,7 +36,7 @@ class Model {
             }
         } catch (PDOException $e) {
             echo "connect_databse Failed.<br>";
-            echo "Database Error: <br>". $e->getMessage();
+            echo "Database Error: <br>". $e->getMessage().'<br>';
         }
     }
 
@@ -49,15 +49,29 @@ class Model {
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
         } catch (PDOException $e){
-            echo "tableExists Failed. <br>";
-            echo "Database error: <br>" . $e->getMessage();
+            echo "tableExists Failed. $tableName <br>";
+            echo "Database error: <br>" . $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
         }
     }
 
+    public function tableExists($tableName, $dbhandle) {
+        $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
+        try {
+            $stmt = $dbhandle->prepare($sql);
+            $stmt->execute([':tableName' => $this->tableName]);
+            $tableExists = $stmt->fetchColumn() > 0;
+            return $tableExists;
+        } catch (PDOException $e){
+            echo "tableExists Failed. $tableName <br>";
+            echo "Database error: <br>" . $e->getMessage().'<br>';
+        }
+    }
+
     public function doGetBrand() {
         $sql = "SELECT name FROM :tableName";
+        $result = [];
         try {
             $this->connect_database();
             $stmt = $this->dbhandle->prepare($sql);
@@ -69,7 +83,7 @@ class Model {
             }
         } catch (PDOException $e) {
             echo "doGetBrand Failed. <br>";
-            echo "Database Error: <br>". $e->getMessage();
+            echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
         }
@@ -89,7 +103,7 @@ class Model {
             $column_list[$i] = $column;
             $i++;
         }
-        $result = $result.'('.implode(',', column_list).')';
+        $result = $result.'('.implode(',', $column_list).')';
         return $result;
     }
 
@@ -97,17 +111,18 @@ class Model {
         $sql = $this->tableCreationSQL($tableName);
         try {
             $this->connect_database();
+            if ($this->tableExists($tableName, $this->dbhandle)) return;
             $this->dbhandle->exec($sql);
         } catch (PDOException $e) {
-            echo "createTable Failed. <br>";
-            echo "Database Error: <br>". $e->getMessage();
+            echo "createTable Failed. $tableName <br>";
+            echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
         }
     }
 
     public function initTables() {
-        foreach($this->tables as $table) {
+        foreach($this->tables as $table => $class) {
             if (!$this->tableExists($table)) {
                 $this->createTable($table);
             }
