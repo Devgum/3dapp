@@ -56,7 +56,7 @@ class Model {
         }
     }
 
-    public function tableExists($tableName, $dbhandle) {
+    public function tableExistsWithHandle($tableName, $dbhandle) {
         $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
         try {
             $stmt = $dbhandle->prepare($sql);
@@ -111,7 +111,7 @@ class Model {
         $sql = $this->tableCreationSQL($tableName);
         try {
             $this->connect_database();
-            if ($this->tableExists($tableName, $this->dbhandle)) return;
+            if ($this->tableExistsWithHandle($tableName, $this->dbhandle)) return;
             $this->dbhandle->exec($sql);
         } catch (PDOException $e) {
             echo "createTable Failed. $tableName <br>";
