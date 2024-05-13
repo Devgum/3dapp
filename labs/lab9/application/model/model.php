@@ -60,7 +60,7 @@ class Model {
         $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
         try {
             $stmt = $dbhandle->prepare($sql);
-            $stmt->execute([':tableName' => $this->tableName]);
+            $stmt->execute([':tableName' => $tableName]);
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
         } catch (PDOException $e){
