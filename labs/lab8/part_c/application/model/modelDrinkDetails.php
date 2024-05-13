@@ -36,7 +36,8 @@
             ChromePhp::warn($stmt);
 
             // Set up an array to return the results to the view
-            $result = null;
+            // Why null?
+            $result = array();
             
             // Set up a variable to index each row of the array
             $i=0;
