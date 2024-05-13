@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
     // Use a relative path so that it works on the ITS Web Server 
-    $.getJSON('../application/model/createJson.php', function(data) {
+    $.getJSON('application/model/createJson.php', function(data) {
         // Check the JSON object using the Chrome Insoect Element consile, to make sure you have received the right data
         console.log(data);
         // Then build the handler to strip out the data from the JSON object and wrap it in appropriate HTML
