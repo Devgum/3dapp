@@ -34,6 +34,7 @@ class Model {
     public function dbGetBrand()
     {
         // Return the Brand Names
+        $result = [];
         $sql = "SELECT brand FROM :tableName";
         try {
             $stmt = $this->dbhandle->prepare($sql);
