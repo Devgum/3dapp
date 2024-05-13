@@ -15,12 +15,7 @@ class Controller {
 
     function home() {
         $data = $this->model->homePageData();
-        $this->load->view('homePage', $data);
-    }
-
-    function modelDisplay() {
-        $data = $this->model->modelPageData();
-        $this->load->view('modelDisplay', $data);
+        $this->load->view('mainPage', $data);
     }
 }
 ?>

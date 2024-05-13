@@ -11,7 +11,9 @@
     <link href="application/css/custom.css" rel="stylesheet">
 </head>
 <body>
-
+    <?php include './application/view/navbar.php'?>
+    <div id='content'>
+    <?php include './application/view/footer.php'?>
     <!-- Scripts -->
     <!-- Placing scripts at tail of the body can reduce the lag caused by the scripts loading-->
     <script src="application/js/jquery-3.7.1.js"></script>
