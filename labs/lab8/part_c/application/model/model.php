@@ -44,7 +44,7 @@ class Model {
             $stmt->exec([':tableName' => $this->$tableName]);
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
-        } catch (PDOException){
+        } catch (PDOException $e){
             print new Exception($e->getMessage());
         }
         $this->dbhandle = NULL;
