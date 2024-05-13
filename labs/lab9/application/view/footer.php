@@ -1,4 +1,4 @@
-<nav id="footer" class="navbar navbar-expand-sm footer">
+<nav class="navbar navbar-expand-sm footer">
     <div class="container-fluid">
         <div class="navbar-text float-left copyright">
             <p>
@@ -7,7 +7,6 @@
                 <a href="javascript:counter -= 1; changeLook(counter);">ChangeBack</a>
                 <a href="javascript:changeLook(0)">Reset</a>
             </p>
-
         </div>
         <div class="navbar-text float-right social">
             <a href="#"><i class="fab fa-facebook-square fa-2x" style="font-size: 20px; color: white"></i></a>

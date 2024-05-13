@@ -1,4 +1,4 @@
-<nav id="header" class="navbar navbar-expand-sm sticky-top navbar-coca-cola">
+<nav class="navbar navbar-expand-sm sticky-top navbar-coca-cola">
     <div class="container-fluid">
         <div class="logo navbar-nav">
             <a class="navbar-brand" href="index.html">
