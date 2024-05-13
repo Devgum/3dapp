@@ -17,7 +17,7 @@ class Model {
         // Then create a connection to a database with the PDO() function
         try {
             // Change connection string for different databases, currently using SQLite
-            $this->dbhandle = new PDO($this->$dsn, $user, $pass, $options);
+            $this->dbhandle = new PDO($this->dsn, $user, $pass, $options);
             // $this->dbhandle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo 'Database connection created</br></br>';
         }
@@ -40,8 +40,8 @@ class Model {
     public function tableExists() {
         $sql = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=:tableName";
         try {
-            $stmt = $this->$dbhandle->prepare($sql);
-            $stmt->exec([':tableName' => $this->$tableName]);
+            $stmt = $this->dbhandle->prepare($sql);
+            $stmt->exec([':tableName' => $this->tableName]);
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
         } catch (PDOException $e){
