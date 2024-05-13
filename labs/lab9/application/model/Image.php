@@ -1,6 +1,4 @@
 <?php
-include './application/model/BaseDAO.php';
-
 class Image extends BaseDAO {
     public static $primary_key = 0;
 
@@ -8,7 +6,7 @@ class Image extends BaseDAO {
         'id' => 'INTEGER',
         'gallery_path' => 'TEXT',
         'render_path' => 'TEXT',
-    ]
+    ];
 
     public $id;
     public $gallery_path;

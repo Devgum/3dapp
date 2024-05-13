@@ -1,6 +1,4 @@
 <?php
-include './application/model/BaseDAO.php';
-
 class Text extends BaseDAO {
     public static $primary_key = 0;
 
@@ -9,7 +7,7 @@ class Text extends BaseDAO {
         'model_title' => 'TEXT',
         'model_subtitle' => 'TEXT',
         'model_description' => 'TEXT',
-    ]
+    ];
 
     public $id;
     public $model_title;

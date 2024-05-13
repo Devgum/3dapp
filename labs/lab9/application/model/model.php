@@ -1,4 +1,5 @@
 <?php
+include './application/model/BaseDAO.php';
 include './application/model/BrandInfo.php';
 include './application/model/X3DInfo.php';
 include './application/model/Text.php';
@@ -29,8 +30,10 @@ class Model {
     }
 
     public function connect_database() {
-        if ($this->dbhandle == null) {
-            $this->dbhandle = new PDO($this->dsn, $this->user, $this->pass, $this->options);
+        try{
+            if ($this->dbhandle == null) {
+                $this->dbhandle = new PDO($this->dsn, $this->user, $this->pass, $this->options);
+            }
         } catch (PDOException $e) {
             echo "connect_databse Failed.<br>";
             echo "Database Error: <br>". $e->getMessage();
@@ -81,7 +84,7 @@ class Model {
         foreach ($tableClass::$columns as $name => $type) {
             $column = "$name $type";
             if ($i == $tableClass::$primary_key) {
-                $column." PRIMARY KEY"
+                $column = $column." PRIMARY KEY";
             }
             $column_list[$i] = $column;
             $i++;
@@ -91,7 +94,7 @@ class Model {
     }
 
     public function createTable($tableName) {
-        $sql = this->tableCreationSQL($tableName);
+        $sql = $this->tableCreationSQL($tableName);
         try {
             $this->connect_database();
             $this->dbhandle->exec($sql);
