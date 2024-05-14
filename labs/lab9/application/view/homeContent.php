@@ -3,9 +3,9 @@
         <div class='col-xs-12 col-sm-12'>
             <div class='main-3d-image'>
                 <div class='col-xs-12 col-sm-4'>
-                    <?php
-                        print_r($data);
-                    ?>
+                    <h2><?php $main_text['title']?></h2>
+                    <h3><?php $main_text['subtitle']?></h3>
+                    <p><?php $main_text['description']?></p>
                 </div>
             </div>
         </div>
