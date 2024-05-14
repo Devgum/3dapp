@@ -81,6 +81,8 @@ class Model {
                 $result[$i] = $object;
                 $i++;
             }
+        } catch (PDOException $e) {
+            throw $e;
         } finally {
             $this->dbhandle = null;
         }
