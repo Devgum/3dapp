@@ -28,7 +28,7 @@ function switch_to(content_api) {
     xmlHttp.open("GET", send, true);
     xmlHttp.send(null);
     xmlHttp.onreadystatechange = function() {
-        if(XMLHttpReqxmlHttpuest.readyState == 4) {
+        if(xmlHttp.readyState == 4) {
             response = xmlHttp.responseText;
             document.getElementById('content').innerHTML = response;
         }
