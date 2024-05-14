@@ -82,7 +82,8 @@ class Model {
                 $i++;
             }
         } catch (PDOException $e) {
-            throw $e;
+            echo "queryDAO Failed. <br>";
+            echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
         }
