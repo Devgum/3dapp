@@ -31,5 +31,9 @@ class Controller {
         }
         $this->load->view('modelDisplay', $data);
     }
+
+    function initDatabase() {
+        $this->model->initTables();
+    }
 }
 ?>
