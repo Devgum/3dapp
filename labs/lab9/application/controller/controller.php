@@ -29,7 +29,7 @@ class Controller {
         } else {
             $data = $this->model->getBrandModel(1);
         }
-        $this->load->view('modelDisplay', $data);
+        $this->load->view('modelContent', $data);
     }
 
     function initDatabase() {
