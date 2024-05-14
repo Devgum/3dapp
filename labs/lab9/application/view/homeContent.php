@@ -1,7 +1,7 @@
 <div class='container-fluid mt-5'>
     <div class='row'>
         <div class='col-xs-12 col-sm-12'>
-            <div class='main-3d-image'>
+            <div class='main-3d-image' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
                 <div class='col-xs-12 col-sm-4'>
                     <h2><?= htmlspecialchars($main_text->title); ?></h2>
                     <h3><?= htmlspecialchars($main_text->subtitle); ?></h3>
