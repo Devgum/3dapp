@@ -153,9 +153,11 @@ class Model {
         $brands = $this->listBrands();
         $i = 0;
         foreach($brands as $brand) {
-            $card = $this->getBrandCard($brand->id);
-            $cards[$i] = $card;
-            $i++;
+            $brandCards = $this->getBrandCard($brand->id);
+            foreach ($brandCards as $card) {
+                $cards[$i] = $card;
+                $i++;
+            }
         }
         $result['cards'] = $cards;
 
