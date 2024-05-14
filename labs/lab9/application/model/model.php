@@ -94,7 +94,7 @@ class Model {
         $condition = [
             'brand_id' => 0,
         ];
-        $sql = Text::generateSelectSQL($condition);
+        $sql = Card::generateSelectSQL($condition);
         $result = null;
         try {
             $this->connect_database();
