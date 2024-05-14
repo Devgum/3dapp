@@ -64,27 +64,43 @@ class Model {
             $tableExists = $stmt->fetchColumn() > 0;
             return $tableExists;
         } catch (PDOException $e){
-            echo "tableExists Failed. $tableName <br>";
+            echo "tableExistsWithHandle Failed. $tableName <br>";
             echo "Database error: <br>" . $e->getMessage().'<br>';
         }
     }
 
-    public function doGetBrand() {
-        $sql = "SELECT name FROM {$this->brandTableName}";
+    private fucntion queryDAO($DAOClass ,$condition = null) {
+        if (! is_subclass_of($DAOClass, BaseDAO::class)) {
+            echo "queryDAO Failed. <br>";
+            throw new Exception("$DAOClass is not a subclass of BaseDAO.");
+        }
+        $sql = $DAOClass::generateSelectSQL($condition);
         $result = [];
         try {
             $this->connect_database();
-            $stmt = $this->dbhandle->query($sql);
+            $stmt = $this->dbhandle->prepare($sql);
+            $stmt->execute($condition);
             $i = 0;
-            while ($data = $stmt->fetch()) {
-                $result[$i] = $data['name'];
+            while ($object = $stmt->fetchObject($DAOClass)) {
+                $result[$i] = $object;
                 $i++;
             }
         } catch (PDOException $e) {
-            echo "doGetBrand Failed. <br>";
+            echo "queryDAO Failed. <br>";
             echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
+        }
+        return $result;
+    }
+
+    public function listBrands() {
+        $brands = $this->queryDAO(BrandInfo::class);
+        $result = [];
+        $i = 0;
+        foreach ($brands as $brand) {
+            $result[$i] = get_object_vars($brand);
+            $i++;
         }
         return $result;
     }
@@ -106,6 +122,20 @@ class Model {
             echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
+        }
+        return get_object_vars($result);
+    }
+
+    public function getBrandCard($brand_id) {
+        $condition = [
+            'brand_id' => $brand_id,
+        ];
+        $cards = $this->queryDAO(BrandInfo::class, $condition);
+        $result = [];
+        $i = 0;
+        foreach ($cards as $card) {
+            $result[$i] = get_object_vars($card);
+            $i++;
         }
         return $result;
     }
