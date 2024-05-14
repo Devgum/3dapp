@@ -4,7 +4,7 @@
             <div class='main-3d-image'>
                 <div class='col-xs-12 col-sm-4'>
                     <?php
-                        echo $data;
+                        print_r($data);
                     ?>
                 </div>
             </div>
