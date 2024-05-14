@@ -69,7 +69,7 @@ class Model {
         }
     }
 
-    private fucntion queryDAO($DAOClass ,$condition = null) {
+    private function queryDAO($DAOClass ,$condition = null) {
         if (! is_subclass_of($DAOClass, BaseDAO::class)) {
             echo "queryDAO Failed. <br>";
             throw new Exception("$DAOClass is not a subclass of BaseDAO.");
