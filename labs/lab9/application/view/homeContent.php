@@ -18,9 +18,15 @@
                     <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>
                 </a>
                 <div class='card-body'>
-                    <div class="card-title"></div>
-                    <div class="card-text"></div>
-                    <div class="card-text"></div>
+                    <div class="card-title">
+                        <h2><?= htmlspecialchars($card->title) ?></h2>
+                    </div>
+                    <div class="card-text">
+                        <h3><?= htmlspecialchars($card->subtitle) ?></h3>
+                    </div>
+                    <div class="card-text">
+                        <p><?= htmlspecialchars($card->description) ?></p>
+                    </div>
                     <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
                 </div>
             </div>
