@@ -93,7 +93,7 @@ class Model {
     public function getMainCard() {
         $condition = [
             'brand_id' => 0,
-        ]
+        ];
         $sql = Text::generateSelectSQL($condition);
         $result = null;
         try {
