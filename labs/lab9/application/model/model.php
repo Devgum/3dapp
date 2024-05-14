@@ -100,7 +100,7 @@ class Model {
         $i = 0;
         foreach ($brands as $brand) {
             if ($brand->id == 0) contnue;
-            $result[$i] = get_object_vars($brand);
+            $result[$i] = $brand;
             $i++;
         }
         return $result;
@@ -124,7 +124,7 @@ class Model {
         } finally {
             $this->dbhandle = null;
         }
-        return get_object_vars($result);
+        return $result;
     }
 
     public function getBrandCard($brand_id) {
@@ -135,7 +135,7 @@ class Model {
         $result = [];
         $i = 0;
         foreach ($cards as $card) {
-            $result[$i] = get_object_vars($card);
+            $result[$i] = $card;
             $i++;
         }
         return $result;
@@ -147,8 +147,22 @@ class Model {
 
     public function homeContentData() {
         $result = [];
+        // Main Text
         $main_text = $this->getMainCard();
         $result['main_text'] = $main_text;
+
+        // Cards
+        // TODO: Could be improve by join selection
+        $cards = [];
+        $brands = $this->listBrands();
+        $i = 0;
+        foreach($brands as $brand) {
+            $card = $this->getBrandCard($brand->id);
+            $cards[$i] = $card;
+            $i++;
+        }
+        $result['cards'] = $cards;
+        
         return $result;
     }
 

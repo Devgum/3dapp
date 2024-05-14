@@ -8,6 +8,7 @@ class Card extends BaseDAO {
         'title' => 'TEXT',
         'subtitle' => 'TEXT',
         'description' => 'TEXT',
+        'image_path' => 'TEXT'
     ];
 
     public static $tableName = 'Card';
@@ -17,5 +18,6 @@ class Card extends BaseDAO {
     public $title;
     public $subtitle;
     public $description;
+    public $image_path;
 }
 ?>
