@@ -15,17 +15,13 @@ class Model {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false,
     ];
-    private $brandTableName = "brand";
-    private $x3dTableName = "x3d";
-    private $textTableName = "card";
-    private $imageTableName = "image";
 
     public function __construct() {
         $this->tables = [
-            $this->brandTableName => BrandInfo::class,
-            $this->x3dTableName => X3DInfo::class,
-            $this->textTableName => Card::class,
-            $this->imageTableName => Image::class,
+            BrandInfo::class,
+            X3DInfo::class,
+            Card::class,
+            Image::class,
         ];
     }
 
@@ -162,7 +158,7 @@ class Model {
             $i++;
         }
         $result['cards'] = $cards;
-        
+
         return $result;
     }
 
@@ -198,7 +194,7 @@ class Model {
     }
 
     public function initTables() {
-        foreach($this->tables as $table => $class) {
+        foreach($this->tables as $table) {
             if (!$this->tableExists($table)) {
                 $this->createTable($table);
             }
