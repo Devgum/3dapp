@@ -20,11 +20,14 @@ var base_php = "index.php/";
 var home_content = "homeContent";
 var model_content = "modelContent";
 
-function switch_to(content_api) {
+function switch_to(content_api, brand_id = 0) {
     var xmlHttp = getXMLHttp();
     var htmlCode = "";
     var response;
     var send = base_php + content_api;
+    if (brand_id > 0) {
+        send = send + '?brand_id=' + brand_id;
+    }
     xmlHttp.open("GET", send, true);
     xmlHttp.send(null);
     xmlHttp.onreadystatechange = function() {

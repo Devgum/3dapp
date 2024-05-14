@@ -10,35 +10,21 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <?php
-
-        ?>
-        <div class="col-sm-4">
-            <div class="card">
-                <a href="">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+    <div class='row'>
+        <?php foreach ($cards as $card): ?>
+        <div class='col-sm-4'>
+            <div class='card'>
+                <a href='javascript:switch_to(model_content, <?= htmlspecialchars($card->brand_id) ?>)'>
+                    <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>
                 </a>
-                <div class="card-body">
+                <div class='card-body'>
                     <div class="card-title"></div>
                     <div class="card-text"></div>
                     <div class="card-text"></div>
-                    <a href="https://www.coca-cola.com/gb/en/brands/coca-cola-original-taste" class="btn btn-primary">Find out more...</a>
+                    <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <a href="">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
-                </a>
-                <div class="card-body">
-                    <div class="card-title"></div>
-                    <div class="card-text"></div>
-                    <div class="card-text"></div>
-                    <a href="https://www.coca-cola.com/gb/en/brands/sprite" class="btn btn-primary">Find out more...</a>
-                </div>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 </div>
