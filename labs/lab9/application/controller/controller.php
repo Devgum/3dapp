@@ -14,7 +14,8 @@ class Controller {
     }
 
     function home() {
-        $this->load->view('mainPage');
+        $data = $this->model->listBrands();
+        $this->load->view('mainPage', $data);
     }
 
     function homeContent() {

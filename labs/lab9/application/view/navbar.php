@@ -33,9 +33,11 @@
                         Drinks
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="javascript:swap('coke');">Coca Cola</a></li>
-                        <li><a class="dropdown-item" href="javascript:swap('sprite');">Sprite</a></li>
-                        <li><a class="dropdown-item" href="javascript:swap('pepper');">Dr Pepper</a></li>
+                        <?php foreach ($brands as $brand): ?>
+                            <li>
+                                <a class='dropdown-item' href='javascript:switch_to(model_content, <?= htmlspecialchars($brand->id) ?>)'><?= htmlspecialchars($brand->name) ?></a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </li>
 
