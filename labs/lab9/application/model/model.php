@@ -164,7 +164,7 @@ class Model {
 
     private function tableCreationSQL($tableName) {
         $result = 'CREATE TABLE '.$tableName;
-        $tableClass = $this->tables[$tableName];
+        $tableClass = $tableName;
         $i = 0;
         $column_list = [];
         foreach ($tableClass::$columns as $name => $type) {
