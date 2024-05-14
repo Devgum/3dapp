@@ -33,7 +33,7 @@
                         Drinks
                     </a>
                     <ul class="dropdown-menu">
-                        <?php foreach ($brands as $brand): ?>
+                        <?php foreach ($data as $brand): ?>
                             <li>
                                 <a class='dropdown-item' href='javascript:switch_to(model_content, <?= htmlspecialchars($brand->id) ?>)'><?= htmlspecialchars($brand->name) ?></a>
                             </li>

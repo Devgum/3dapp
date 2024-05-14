@@ -92,14 +92,7 @@ class Model {
 
     public function listBrands() {
         $brands = $this->queryDAO(BrandInfo::class);
-        $result = [];
-        $i = 0;
-        foreach ($brands as $brand) {
-            if ($brand->id == 0) continue;
-            $result[$i] = $brand;
-            $i++;
-        }
-        return $result;
+        return $brands;
     }
 
     // Main Text
