@@ -99,6 +99,7 @@ class Model {
         $result = [];
         $i = 0;
         foreach ($brands as $brand) {
+            if ($brand->id == 0) contnue;
             $result[$i] = get_object_vars($brand);
             $i++;
         }
@@ -140,12 +141,12 @@ class Model {
         return $result;
     }
 
-    public function homePageData() {
+    public function getBrandModel($brand_id) {
         
     }
 
-    public function modelPageData($brandName) {
-        
+    public function homeContentData() {
+
     }
 
     private function tableCreationSQL($tableName) {

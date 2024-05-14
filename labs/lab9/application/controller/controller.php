@@ -14,8 +14,22 @@ class Controller {
     }
 
     function home() {
-        $data = $this->model->homePageData();
-        $this->load->view('mainPage', $data);
+        $this->load->view('mainPage');
+    }
+
+    function homeContent() {
+        $data = $this->model->homeContentData();
+        $this->load->view('homeContent', $data);
+    }
+
+    function modelContent() {
+        $data = null;
+        if (array_key_exists('brand_id', $_GET)) {
+            $data = $this->model->getBrandModel($_GET['brand_id'])
+        } else {
+            $data = $this->model->getBrandModel(1);
+        }
+        $this->load->view('modelDisplay', $data);
     }
 }
 ?>
