@@ -95,7 +95,7 @@ class Model {
         $result = [];
         $i = 0;
         foreach ($brands as $brand) {
-            if ($brand->id == 0) contnue;
+            if ($brand->id == 0) continue;
             $result[$i] = $brand;
             $i++;
         }
