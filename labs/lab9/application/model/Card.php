@@ -8,8 +8,8 @@ class Card extends BaseDAO {
         'title' => 'TEXT',
         'subtitle' => 'TEXT',
         'description' => 'TEXT',
-        'image_path' => 'TEXT'
-        'link' => 'TEXT'
+        'image_path' => 'TEXT',
+        'link' => 'TEXT',
     ];
 
     public static $tableName = 'Card';
