@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm sticky-top navbar-coca-cola">
     <div class="container-fluid">
         <div class="logo navbar-nav">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="javascript:switch_to(homeContent)">
                 <h1>1</h1>
                 <h1>oca</h1>
                 <h2>Cola</h2>
@@ -22,7 +22,7 @@
             <!-- Reference: https://stackoverflow.com/questions/63948287/bootstrap-5-navbar-align-items-right-->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="javascript:swap('home');">Home</a>
+                    <a class="nav-link active" href="javascript:switch_to(homeContent)">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
