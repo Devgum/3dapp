@@ -16,7 +16,7 @@ function getXMLHttp() {
     return xmlHttp;
 }
 
-var base_php = "./application/controller/index.php/";
+var base_php = "index.php/";
 var home_content = "homeContent";
 var model_content = "modelContent";
 
@@ -24,11 +24,11 @@ function switch_to(content_api) {
     var xmlHttp = getXMLHttp();
     var htmlCode = "";
     var response;
-    var send = base_php + php_path;
+    var send = base_php + content_api;
     xmlHttp.open("GET", send, true);
     xmlHttp.send(null);
     xmlHttp.onreadystatechange = function() {
-        if(XMLHttpRequest.readyState == 4) {
+        if(XMLHttpReqxmlHttpuest.readyState == 4) {
             response = xmlHttp.responseText;
             document.getElementById('content').innerHTML = response;
         }
