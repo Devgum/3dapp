@@ -2,7 +2,7 @@
 include './application/model/BaseDAO.php';
 include './application/model/BrandInfo.php';
 include './application/model/X3DInfo.php';
-include './application/model/Text.php';
+include './application/model/Card.php';
 include './application/model/Image.php';
 
 class Model {
@@ -17,14 +17,14 @@ class Model {
     ];
     private $brandTableName = "brand";
     private $x3dTableName = "x3d";
-    private $textTableName = "text";
+    private $textTableName = "card";
     private $imageTableName = "image";
 
     public function __construct() {
         $this->tables = [
             $this->brandTableName => BrandInfo::class,
             $this->x3dTableName => X3DInfo::class,
-            $this->textTableName => Text::class,
+            $this->textTableName => Card::class,
             $this->imageTableName => Image::class,
         ];
     }
@@ -82,6 +82,27 @@ class Model {
             }
         } catch (PDOException $e) {
             echo "doGetBrand Failed. <br>";
+            echo "Database Error: <br>". $e->getMessage().'<br>';
+        } finally {
+            $this->dbhandle = null;
+        }
+        return $result;
+    }
+
+    // Main Text
+    public function getMainCard() {
+        $condition = [
+            'brand_id' => 0,
+        ]
+        $sql = Text::generateSelectSQL($condition);
+        $result = null;
+        try {
+            $this->connect_database();
+            $stmt = $this->dbhandle->prepare($sql);
+            $stmt->execute($condition);
+            $result = $stmt->fetchObject('Card');
+        } catch (PDOException $e) {
+            echo "getMainCard Failed. <br>";
             echo "Database Error: <br>". $e->getMessage().'<br>';
         } finally {
             $this->dbhandle = null;
