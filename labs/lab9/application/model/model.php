@@ -146,7 +146,10 @@ class Model {
     }
 
     public function homeContentData() {
-
+        $result = [];
+        $main_text = $this->getMainCard();
+        $result['main_text'] = $main_text;
+        return $result;
     }
 
     private function tableCreationSQL($tableName) {
