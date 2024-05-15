@@ -1,6 +1,6 @@
 <div class="container-fluid main_contents dark_1">
     <div class='row'>
-        <div class='col-sm-10'>
+        <div class='col-sm-4'>
             <div class='card text-left'>
                 <!-- Model Selection -->
                 <div class='card-header'>
@@ -53,9 +53,9 @@
                 <div class='card-body'>
 
                     <!-- Cameras -->
-                    <div class='btn-group'>
+                    <div class='btn-group-vertical'>
                         <?php foreach ($viewpoints as $viewpoint): ?>
-                            <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
+                            <a id='<?= htmlspecialchars($viewpoint['id']) ?>' class="btn btn-primary btn-responsive" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true'); toggle_active_btn(<?= htmlspecialchars($viewpoint['id']) ?>)"><?= htmlspecialchars($viewpoint['description']) ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
