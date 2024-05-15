@@ -6,7 +6,7 @@
                     <ul class='nav nav-tabs card-header-tabs'>
                         <?php foreach ($brands as $brand): ?>
                             <li class='nav-item'>
-                                <a class='nav-link active' href='javascript:switch_to(model_content, <?= htmlspecialchars($brand->id) ?>'><?= htmlspecialchars($brand->name) ?></a>
+                                <a class='nav-link' href='javascript:switch_to(model_content, <?= $brand->id ?>)'><?= htmlspecialchars($brand->name) ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -16,13 +16,13 @@
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
                         </scene>
-                        <!-- Viewpoints -->
                     </x3d>
                     <script>
-                        x3dom.reload();
+                        document.addEventListener('DOMContentLoaded', function() {
+                                x3dom.reload();
+                            });
                     </script>
                 </div>
-                
             </div>
         </div>
     </div>
