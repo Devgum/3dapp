@@ -55,7 +55,7 @@
                     <!-- Cameras -->
                     <div class='btn-group-vertical'>
                         <?php foreach ($viewpoints as $viewpoint): ?>
-                            <a id='<?= htmlspecialchars($viewpoint['id']) ?>' class="btn btn-primary btn-responsive" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true'); toggle_active_btn('<?= htmlspecialchars($viewpoint['id']) ?>')"><?= htmlspecialchars($viewpoint['description']) ?></a>
+                            <a id='<?= htmlspecialchars($viewpoint['id']) ?>_btn' class="btn btn-primary btn-responsive" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true'); toggle_active_btn('<?= htmlspecialchars($viewpoint['id']) ?>_btn')"><?= htmlspecialchars($viewpoint['description']) ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
