@@ -1,4 +1,4 @@
-<footer class="bg-black pb-5 container-fluid">
+<footer class="bg-black container-fluid">
     <div class="row">
         <div class="col-md-10 text-left">
             <p>&copy; 2024 Zhao, Ruochen</p>

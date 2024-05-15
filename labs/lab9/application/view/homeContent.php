@@ -1,4 +1,4 @@
-<div class='container-fluid mt-5'>
+<div class='container-fluid bg-black'>
     <section class='main-showcase' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
         <article class='info container'>
             <h2><?= htmlspecialchars($main_text->title); ?></h2>
