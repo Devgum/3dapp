@@ -128,10 +128,13 @@
   background-size: 100% 100%; }
 
 .main-showcase {
-    color: #white;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 300px;
+}
+
+.main-showcase > .info {
+    color: #white;
 }
 
 footer {
