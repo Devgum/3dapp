@@ -182,6 +182,12 @@
     line-height: 1.2;
 }
 
+X3D, x3d {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
 footer {
     color: white;
     padding: 10px 0;

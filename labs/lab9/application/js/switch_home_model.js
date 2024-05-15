@@ -41,5 +41,4 @@ function switch_to(content_api, brand_id = 0) {
 
 $(document).ready(function() {
     switch_to(home_content);
-    toggle_active_btn('default_btn');
 });
