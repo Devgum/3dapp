@@ -18,6 +18,9 @@
                         </scene>
                         <!-- Viewpoints -->
                     </x3d>
+                    <script>
+                        x3dom.reload();
+                    </script>
                 </div>
                 
             </div>
