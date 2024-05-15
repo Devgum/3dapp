@@ -24,7 +24,7 @@
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
                             <?php
-                                $viewpoints = json_decode($model->viewpoints);
+                                $viewpoints = json_decode($model->viewpoints, true) ?: [];
                                 foreach($viewpoints as $viewpoint):
                             ?>
                                 <Viewpoint id='<?= $viewpoints->id ?>'
