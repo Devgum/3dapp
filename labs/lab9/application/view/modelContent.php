@@ -4,11 +4,11 @@
             <div class='card text-left'>
                 <div class='card-header'>
                     <ul class='nav nav-tabs card-header-tabs'>
-                        <?php foreach ($brands as $brand): ?>
-                            <?php
-                                $currentBrandId = $_GET['brand_id'] ?? 1;
-                                $isActive = ($brand->id == $currentBrandId) ? 'active' : '';
-                            ?>
+                        <?php 
+                        $currentBrandId = $_GET['brand_id'] ?? 1;
+                        foreach ($brands as $brand): 
+                            $isActive = ($brand->id == $currentBrandId) ? 'active' : '';
+                        ?>
                             <li class='nav-item'>
                                 <a class='nav-link <?= $isActive ?>' href='javascript:switch_to(model_content, <?= $brand->id ?>)'><?= htmlspecialchars($brand->name) ?></a>
                             </li>
