@@ -127,6 +127,13 @@
   background: no-repeat center center;
   background-size: 100% 100%; }
 
+.main-showcase {
+    color: #white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
 footer {
     color: white;
     padding: 10px 0;

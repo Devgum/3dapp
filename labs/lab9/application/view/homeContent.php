@@ -1,5 +1,5 @@
 <div class='container-fluid mt-5'>
-    <section class='main_3d_image' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
+    <section class='main-showcase' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
         <article class='info'>
             <h2><?= htmlspecialchars($main_text->title); ?></h2>
             <h3><?= htmlspecialchars($main_text->subtitle); ?></h3>
