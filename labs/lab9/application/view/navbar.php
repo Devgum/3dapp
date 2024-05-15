@@ -1,4 +1,4 @@
-<nav class="topnav navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+<nav class="topnav navbar navbar-expand-lg navbar-dark dark_1 fixed-top">
 <div class="container-fluid">
     <a class="navbar-brand logo" href="javascript:switch_to(home_content)">
         <h1>1</h1>
