@@ -45,13 +45,12 @@
         <div class='col-sm-2'>
             <div class='card'>
                 <div class='card-title'>
-                    Camera Views
+                    <h3>Camera Views</h3>
                 </div>
                 <div class='card-text'>
-                    These buttons select a range of X3D model viewpoints.
+                    <p>These buttons select a range of X3D model viewpoints.</p>
                 </div>
                 <div class='card-body'>
-
                     <!-- Cameras -->
                     <div class='btn-group-vertical'>
                         <?php foreach ($viewpoints as $viewpoint): ?>
@@ -92,7 +91,7 @@
                         foreach ($images as $image):
                         ?>
                             <a href='<?= htmlspecialchars($image) ?>'>
-                                <img src='<?= htmlspecialchars($image) ?>' class='card-img-top img-thumbnail'/>
+                                <img src='<?= htmlspecialchars($image) ?>' class='card-img-top img-thumbnail gallery_img'/>
                             </a>
                         <?php endforeach; ?>
                     </div>
