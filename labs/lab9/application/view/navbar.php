@@ -1,6 +1,6 @@
 <nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:switch_to(home_content)">
+    <a class="navbar-brand logo" href="javascript:switch_to(home_content)">
         <h1>1</h1>
         <h1>oca</h1>
         <h2>Cola</h2>
