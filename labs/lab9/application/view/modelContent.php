@@ -63,7 +63,7 @@
                 <div class='card-header'>Image Gallery</div>
                 <div class='gallery'>
                     <?php
-                    include './application/view/gallery.php'
+                    include './application/view/gallery.php';
 
                     foreach ($images as $image):
                     ?>
