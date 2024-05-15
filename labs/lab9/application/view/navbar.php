@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto d-flex align-items-center">
             <li class="nav-item">
-                <a class="nav-link" href="javascript:switch_to('home_content')">Home</a>
+                <a class="nav-link" href="javascript:switch_to(home_content)">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -24,7 +24,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <?php foreach ($brands as $brand): ?>
-                    <li><a class="dropdown-item" href="javascript:switch_to('model_content', <?= $brand->id ?>)"><?= $brand->display ?></a></li>
+                    <li><a class="dropdown-item" href="javascript:switch_to(model_content, <?= $brand->id ?>)"><?= $brand->display ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </li>

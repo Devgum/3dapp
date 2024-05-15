@@ -1,12 +1,12 @@
 <div class='container-fluid bg-black'>
     <section class='main-showcase' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
-        <article class='info container'>
+        <article class='info container text-center'>
             <h2><?= htmlspecialchars($main_text->title); ?></h2>
             <h3><?= htmlspecialchars($main_text->subtitle); ?></h3>
             <p><?= htmlspecialchars($main_text->description); ?></p>
         </article>
     </section>
-    <div class='row'>
+    <div class='row mt-10'>
         <?php foreach ($cards as $card): ?>
         <div class='col-sm-4'>
             <div class='card'>

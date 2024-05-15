@@ -145,19 +145,19 @@
 
 .info h2 {
     color: rgba(0,102,153,1);
-    font-size: 2rem;
+    font-size: 50px;
     margin-top: 0px;
     margin-bottom: 5px;
 }
 
 .info h3 {
-    font-size: 1.5rem;
+    font-size: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .info p {
-    font-size: 1.2rem;
+    font-size: 15px;
     margin: 0px;
     line-height: 1.2;
 }
