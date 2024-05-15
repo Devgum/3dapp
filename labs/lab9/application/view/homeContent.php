@@ -6,7 +6,7 @@
             <p><?= htmlspecialchars($main_text->description); ?></p>
         </article>
     </section>
-    <div class='row mt-10'>
+    <div class='row mt-3'>
         <?php foreach ($cards as $card): ?>
         <div class='col-sm-4'>
             <div class='card dark_2'>
