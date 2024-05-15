@@ -1,6 +1,6 @@
 <?php
 $currentBrandId = isset($_GET['brand_id']) ? $_GET['brand_id'] : 1;
-$gallery_directory = './assets/gallery/';
+$gallery_directory = './assets/images/gallery/';
 foreach ($brands as $brand) {
     if ($brand->id == $currentBrandId) {
         $gallery_directory .= $brand->name;
