@@ -1,4 +1,4 @@
-<div class='container-fluid bg-black'>
+<div class='container-fluid dark_1'>
     <section class='main-showcase' style='background-image: url(<?= htmlspecialchars($main_text->image_path) ?>);'>
         <article class='info container text-center'>
             <h2><?= htmlspecialchars($main_text->title); ?></h2>
@@ -9,7 +9,7 @@
     <div class='row mt-10'>
         <?php foreach ($cards as $card): ?>
         <div class='col-sm-4'>
-            <div class='card'>
+            <div class='card dark_2'>
                 <a href='javascript:switch_to(model_content, <?= htmlspecialchars($card->brand_id) ?>)'>
                     <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>
                 </a>

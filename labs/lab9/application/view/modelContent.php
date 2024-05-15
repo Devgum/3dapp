@@ -1,4 +1,4 @@
-<div class="container-fluid mt-5 main_contents">
+<div class="container-fluid main_contents dark_1">
     <div class='row'>
         <div class='col-sm-10'>
             <div class='card text-left'>

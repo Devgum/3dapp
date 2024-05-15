@@ -13,6 +13,26 @@
     src: url(../assets/fonts/Oswald-Regular.ttf);
 }
 
+.dark_1 {
+    background-color: #2B2D42;
+}
+
+.dark_2 {
+    background-color: #8D99AE;
+}
+
+.light {
+    background-color: #EDF2F4;
+}
+
+.red_1 {
+    background-color: #EF233C;
+}
+
+.red_2 {
+    background-color: #D90429;
+}
+
 .logo {
     margin-top: 3px;
 }
