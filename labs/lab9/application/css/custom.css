@@ -58,8 +58,50 @@
     padding-left: 3px;
 }
 
-.bg-red {
-    background-color: #FF0000;
+.navbar-coca-cola {
+    background-color: #760003;
+    border-width: 0px;
+    min-height: 70px;
+}
+
+.navbar-coca-cola .navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-coca-cola .navbar-brand:hover {
+    color: green;
+}
+
+.navbar-coca-cola .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-coca-cola .navbar-nav > li > a:hover,
+.navbar-coca-cola .navbar-nav > li > a:focus {
+    color: green;
+}
+
+.navbar-coca-cola .navbar-nav .nav-item {
+    margin-top: 0px;
+}
+
+.navbar-coca-cola .navbar-nav .nav-item > .active,
+.navbar-coca-cola .navbar-nav > .active > a:hover,
+.navbar-coca-cola .navbar-nav > .active > a:focus {
+    background-color: #3399ff !important;
+}
+
+.navbar-coca-cola .navbar-nav > li > a:hover,
+.navbar-coca-cola .navbar-nav > li > a:focus {
+    color: green;
+}
+
+.navbar-coca-cola .navbar-toggler {
+    border-color: white;
+}
+ 
+.navbar-coca-cola .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .nav-link {

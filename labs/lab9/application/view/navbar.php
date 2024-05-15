@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm sticky-top red-bg">
+<nav class="navbar navbar-expand-sm sticky-top navbar-coca-cola">
     <div class="container-fluid">
         <div class="logo navbar-nav">
             <a class="navbar-brand" href="javascript:switch_to(home_content)">
