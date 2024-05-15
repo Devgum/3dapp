@@ -1,6 +1,6 @@
 <div class="container-fluid mt-5 main_contents">
     <div class='row'>
-        <div class='col-sm-10'>
+        <div class='col-sm-8'>
             <div class='card text-left'>
 
                 <!-- Model Selection -->

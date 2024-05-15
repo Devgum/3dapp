@@ -5,6 +5,7 @@ class Card extends BaseDAO {
     public static $columns = [
         'id' => 'INTEGER',
         'brand_id' => 'INTEGER',
+        'page_no' => 'INTEGER',
         'title' => 'TEXT',
         'subtitle' => 'TEXT',
         'description' => 'TEXT',
@@ -14,6 +15,7 @@ class Card extends BaseDAO {
 
     public $id;
     public $brand_id;
+    public $page_no;
     public $title;
     public $subtitle;
     public $description;

@@ -152,8 +152,11 @@ class Model {
         $result['brands'] = $brands;
 
         // Brand Card
-        $card = $this->getBrandCard($brand_id)[0];
-        $result['card'] = $card;
+        $cards = $this->getBrandCard($brand_id);
+        foreach ($cards as $card) {
+            if ($card->page_no != 1) continue;
+            $result['card'] = $card;
+        }
 
         // Model Infos
         $model = $this->getBrandModel($brand_id);
@@ -176,6 +179,7 @@ class Model {
         foreach($brands as $brand) {
             $brandCards = $this->getBrandCard($brand->id);
             foreach ($brandCards as $card) {
+                if ($card->page_no != 0) continue;
                 $cards[$i] = $card;
                 $i++;
             }
