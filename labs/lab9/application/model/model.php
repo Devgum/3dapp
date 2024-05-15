@@ -142,7 +142,7 @@ class Model {
             'brand_id' => $brand_id,
         ];
         $model = $this->queryDAO(X3DInfo::class, $condition)[0];
-        return $model
+        return $model;
     }
 
     public function modelContentData($brand_id) {
