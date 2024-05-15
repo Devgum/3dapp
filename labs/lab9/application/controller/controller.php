@@ -14,7 +14,9 @@ class Controller {
     }
 
     function home() {
-        $data = $this->model->listBrands();
+        $data = [
+            'brands' => $this->model->listBrands(),
+        ];
         $this->load->view('mainPage', $data);
     }
 
