@@ -5,7 +5,7 @@
                 <div class='card-header'>
                     <ul class='nav nav-tabs card-header-tabs'>
                         <?php 
-                        $currentBrandId = $_GET['brand_id'] ?? 1;
+                        $currentBrandId = isset($_GET['brand_id']) ? $_GET['brand_id'] : 1;
                         foreach ($brands as $brand): 
                             $isActive = ($brand->id == $currentBrandId) ? 'active' : '';
                         ?>
