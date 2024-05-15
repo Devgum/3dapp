@@ -2,7 +2,6 @@
     <div class='row'>
         <div class='col-sm-8'>
             <div class='card text-left'>
-
                 <!-- Model Selection -->
                 <div class='card-header'>
                     <ul class='nav nav-tabs card-header-tabs'>
@@ -43,45 +42,28 @@
             </div>
         </div>
 
-        <div class='card'>
-            <div class='card-title'>
-                Camera Views
-            </div>
-            <div class='card-text'>
-                These buttons select a range of X3D model viewpoints.
-            </div>
-            <div class='card-body'>
-
-                <!-- Cameras -->
-                <div class='btn-group'>
-                    <?php foreach ($viewpoints as $viewpoint): ?>
-                        <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
-                    <?php endforeach ?>
+        <div class='col-sm-4'>
+            <div class='card'>
+                <div class='card-title'>
+                    Camera Views
                 </div>
-            </div>
-        </div>
-
-        <!-- Gallery -->                
-        <div class='col-sm-2'>
-            <div class='card text-left'>
-                <div class='card-header'>Image Gallery</div>
-                <div class='gallery'>
-                    <?php
-                    include './application/view/gallery.php';
-
-                    foreach ($images as $image):
-                    ?>
-                        <a href='<?= htmlspecialchars($image) ?>'>
-                            <img src='<?= htmlspecialchars($image) ?>' class='card-img-top img-thumbnail'/>
-                        </a>
-                    <?php endforeach; ?>
+                <div class='card-text'>
+                    These buttons select a range of X3D model viewpoints.
                 </div>
-                <p class='card-text'>Images rendered in Blender</p>
+                <div class='card-body'>
+
+                    <!-- Cameras -->
+                    <div class='btn-group'>
+                        <?php foreach ($viewpoints as $viewpoint): ?>
+                            <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
+                        <?php endforeach ?>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class='row'>
-            <div class='col-xs-12 col-sm-12'>
+            <div class='col-sm-4'>
                 <?php foreach ($cards as $card): ?>
                 <div class='card'>
                     <div class='card-body'>
@@ -98,6 +80,24 @@
                     </div>
                 </div>
                 <?php endforeach; ?>
+            </div>
+
+            <div class='col-sm-8'>
+                <div class='card text-left'>
+                    <div class='card-header'>Image Gallery</div>
+                    <div class='gallery'>
+                        <?php
+                        include './application/view/gallery.php';
+
+                        foreach ($images as $image):
+                        ?>
+                            <a href='<?= htmlspecialchars($image) ?>'>
+                                <img src='<?= htmlspecialchars($image) ?>' class='card-img-top img-thumbnail'/>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                    <p class='card-text'>Images rendered in Blender</p>
+                </div>
             </div>
         </div>
     </div>
