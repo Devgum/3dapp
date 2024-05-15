@@ -12,8 +12,6 @@ class Card extends BaseDAO {
         'link' => 'TEXT',
     ];
 
-    public static $tableName = 'Card';
-
     public $id;
     public $brand_id;
     public $title;

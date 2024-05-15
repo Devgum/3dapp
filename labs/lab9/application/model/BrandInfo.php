@@ -7,8 +7,6 @@ class BrandInfo extends BaseDAO {
         'name' => 'TEXT',
     ];
 
-    public static $tableName = 'brand';
-
     public $id;
     public $name;
 }

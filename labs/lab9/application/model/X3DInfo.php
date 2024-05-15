@@ -6,12 +6,14 @@ class X3DInfo extends BaseDAO {
         'id' => 'INTEGER',
         'brand_id' => 'INTEGER',
         'path' => 'TEXT',
+        'title' => 'TEXT',
+        'description' => 'TEXT',
     ];
-
-    public static $tableName = 'x3d';
 
     public $id;
     public $brand_id;
     public $path;
+    public $title;
+    public $description;
 }
 ?>

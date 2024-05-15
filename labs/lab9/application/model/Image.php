@@ -9,8 +9,6 @@ class Image extends BaseDAO {
         'render_path' => 'TEXT',
     ];
 
-    public static $tableName = 'image';
-
     public $id;
     public $brand_id;
     public $gallery_path;

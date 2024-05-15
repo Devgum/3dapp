@@ -138,7 +138,24 @@ class Model {
     }
 
     public function getBrandModel($brand_id) {
-        
+        $condition = [
+            'brand_id' => $brand_id,
+        ];
+        $model = $this->queryDAO(X3DInfo::class, $condition)[0];
+        return $model
+    }
+
+    public function modelContentData($brand_id) {
+        $result = [];
+        // Brand Infos
+        $brands = $this->listBrands();
+        $result['brands'] = $brands;
+
+        // Model Infos
+        $model = $this->getBrandModel($brand_id);
+        $result['model'] = $model;
+
+        return $result;
     }
 
     public function homeContentData() {
