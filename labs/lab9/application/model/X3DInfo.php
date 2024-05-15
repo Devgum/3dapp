@@ -8,6 +8,7 @@ class X3DInfo extends BaseDAO {
         'path' => 'TEXT',
         'title' => 'TEXT',
         'description' => 'TEXT',
+        'viewpoints' => 'TEXT',
     ];
 
     public $id;
@@ -15,5 +16,6 @@ class X3DInfo extends BaseDAO {
     public $path;
     public $title;
     public $description;
+    public $viewpoints;
 }
 ?>

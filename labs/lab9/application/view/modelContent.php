@@ -15,10 +15,11 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
-                <div class=''>
+                <div class='model3D'>
                     <x3d width='100%' height='100%'>
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
+                            <!-- Viewpoints -->
                         </scene>
                     </x3d>
                 </div>
