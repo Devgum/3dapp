@@ -127,7 +127,13 @@ class Model {
         $condition = [
             'brand_id' => $brand_id,
         ];
-        $result = $this->queryDAO(Card::class, $condition)[0];
+        $cards = $this->queryDAO(Card::class, $condition);
+        $result = [];
+        $i = 0;
+        foreach ($cards as $card) {
+            $result[$i] = $card;
+            $i++;
+        }
         return $result;
     }
 
@@ -146,7 +152,7 @@ class Model {
         $result['brands'] = $brands;
 
         // Brand Card
-        $card = $this->getBrandCard($brand_id);
+        $card = $this->getBrandCard($brand_id)[0];
         $result['card'] = $card;
 
         // Model Infos
