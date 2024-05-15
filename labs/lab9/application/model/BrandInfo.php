@@ -5,9 +5,11 @@ class BrandInfo extends BaseDAO {
     public static $columns = [
         'id' => 'INTEGER',
         'name' => 'TEXT',
+        'display' => 'TEXT',
     ];
 
     public $id;
     public $name;
+    public $display;
 }
 ?>
