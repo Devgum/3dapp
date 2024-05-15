@@ -27,12 +27,12 @@
                                 $viewpoints = json_decode($model->viewpoints, true) ?: [];
                                 foreach($viewpoints as $viewpoint):
                             ?>
-                                <Viewpoint id='<?= $viewpoints['id'] ?>'
-                                    position='<?= $viewpoints['position'] ?>'
-                                    orientation='<?= $viewpoints['orientation'] ?>'
-                                    zNear='<?= $viewpoints['zNear'] ?>'
-                                    zFar='<?= $viewpoints['zFar'] ?>'
-                                    description='<?= $viewpoints['description'] ?>'>
+                                <Viewpoint id='<?= $viewpoint['id'] ?>'
+                                    position='<?= $viewpoint['position'] ?>'
+                                    orientation='<?= $viewpoint['orientation'] ?>'
+                                    zNear='<?= $viewpoint['zNear'] ?>'
+                                    zFar='<?= $viewpoint['zFar'] ?>'
+                                    description='<?= $viewpoint['description'] ?>'>
                             <?php endforeach; ?>
                         </scene>
                     </x3d>
@@ -52,7 +52,7 @@
                     <div class='btn-group'>
                         <?php foreach ($viewpoints as $viewpoint): ?>
                             <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
-                        <?php endforeach ?>?>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>
