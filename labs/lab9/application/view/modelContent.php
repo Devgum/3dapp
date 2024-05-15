@@ -57,6 +57,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Gallery -->                
         <div class='col-sm-2'>
             <div class='card text-left'>
@@ -73,6 +74,25 @@
                     <?php endforeach; ?>
                 </div>
                 <p class='card-text'>Images rendered in Blender</p>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12'>
+                <div class='card'>
+                    <div class='card-body'>
+                        <div class='card-title'>
+                            <h2><?= htmlspecialchars($card->title) ?></h2>
+                        </div>
+                        <div class='card-text'>
+                            <h3><?= htmlspecialchars($card->subtitle) ?></h3>
+                        </div>
+                        <div>
+                            <p><?= htmlspecialchars($card->description) ?></p>
+                        </div>
+                        <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
                     <ul class="dropdown-menu">
                         <?php foreach ($data as $brand): ?>
                             <li>
-                                <a class='dropdown-item' href='javascript:switch_to(model_content, <?= htmlspecialchars($brand->id) ?>)'><?= htmlspecialchars($brand->name) ?></a>
+                                <a class='dropdown-item' href='javascript:switch_to(model_content, <?= htmlspecialchars($brand->id) ?>)'><?= htmlspecialchars($brand->display) ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>

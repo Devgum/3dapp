@@ -151,6 +151,10 @@ class Model {
         $brands = $this->listBrands();
         $result['brands'] = $brands;
 
+        // Brand Card
+        $card = $this->getBrandCard($brand_id);
+        $result['card'] = $card;
+
         // Model Infos
         $model = $this->getBrandModel($brand_id);
         $result['model'] = $model;
