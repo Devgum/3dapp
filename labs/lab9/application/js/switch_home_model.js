@@ -34,6 +34,7 @@ function switch_to(content_api, brand_id = 0) {
         if(xmlHttp.readyState == 4) {
             response = xmlHttp.responseText;
             document.getElementById('content').innerHTML = response;
+            x3dom.reload();
         }
     }
 }

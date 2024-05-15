@@ -17,11 +17,6 @@
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
                         </scene>
                     </x3d>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                                x3dom.reload();
-                            });
-                    </script>
                 </div>
             </div>
         </div>
