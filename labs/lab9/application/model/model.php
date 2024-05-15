@@ -3,7 +3,6 @@ include './application/model/BaseDAO.php';
 include './application/model/BrandInfo.php';
 include './application/model/X3DInfo.php';
 include './application/model/Card.php';
-include './application/model/Image.php';
 
 class Model {
     private $dbhandle;
