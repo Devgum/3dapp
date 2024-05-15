@@ -58,59 +58,74 @@
     padding-left: 3px;
 }
 
-.navbar-coca-cola {
-    background-color: #760003;
-    border-width: 0px;
-    min-height: 70px;
-}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem; }
+  .navbar > .container,
+  .navbar > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; }
 
-.navbar-coca-cola .navbar-brand {
-    color: white;
-}
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.68rem;
+  padding-bottom: 0.68rem;
+  margin-right: 1rem;
+  font-size: 1.15rem;
+  line-height: inherit;
+  white-space: nowrap; }
+  .navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none; }
 
-.navbar-coca-cola .navbar-brand:hover {
-    color: green;
-}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0; }
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none; }
 
-.navbar-coca-cola .navbar-nav > li > a {
-    color: white;
-}
+.navbar-text {
+  display: inline-block;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem; }
 
-.navbar-coca-cola .navbar-nav > li > a:hover,
-.navbar-coca-cola .navbar-nav > li > a:focus {
-    color: green;
-}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center; }
 
-.navbar-coca-cola .navbar-nav .nav-item {
-    margin-top: 0px;
-}
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem; }
+  .navbar-toggler:hover, .navbar-toggler:focus {
+    text-decoration: none; }
+  .navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer; }
 
-.navbar-coca-cola .navbar-nav .nav-item > .active,
-.navbar-coca-cola .navbar-nav > .active > a:hover,
-.navbar-coca-cola .navbar-nav > .active > a:focus {
-    background-color: #3399ff !important;
-}
-
-.navbar-coca-cola .navbar-nav > li > a:hover,
-.navbar-coca-cola .navbar-nav > li > a:focus {
-    color: green;
-}
-
-.navbar-coca-cola .navbar-toggler {
-    border-color: white;
-}
- 
-.navbar-coca-cola .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.nav-link {
-    color: white;
-}
-
-.nav-link:hover {
-    background-color: #ffffff22;
-}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%; }
 
 footer {
     background-color: #333;
