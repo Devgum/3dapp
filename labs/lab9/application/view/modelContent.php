@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- Model -->
-                <div class='card-body model3D'>
+                <div class='card-body model3D dark_2'>
                     <x3d width='100%' height='100%'>
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
