@@ -153,7 +153,7 @@ class Model {
 
         // Brand Card
         $cards = $this->getBrandCard($brand_id);
-        $result['cards'] = []
+        $result['cards'] = [];
         $i = 0;
         foreach ($cards as $card) {
             if ($card->page_no != 1) continue;
