@@ -1,16 +1,16 @@
 @font-face {
     font-family: lokicola;
-    src: url(../../assets/fonts/LOKICOLA.TTF);
+    src: url(../fonts/LOKICOLA.TTF);
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(../../assets/fonts/OpenSans-Regular.ttf);
+    src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
     font-family: Oswald;
-    src: url(../../assets/fonts/Oswald-Regular.ttf);
+    src: url(../assets/fonts/Oswald-Regular.ttf);
 }
 
 .logo {
