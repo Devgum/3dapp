@@ -1,7 +1,7 @@
 <div class="container-fluid main_contents dark_1">
     <div class='row'>
         <div class='col-sm-4'>
-            <div class='card text-left'>
+            <div class='card text-left dark_2'>
                 <!-- Model Selection -->
                 <div class='card-header'>
                     <ul class='nav nav-tabs card-header-tabs'>
@@ -18,7 +18,7 @@
                 </div>
 
                 <!-- Model -->
-                <div class='card-body model3D dark_2'>
+                <div class='card-body model3D'>
                     <x3d width='100%' height='100%'>
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
