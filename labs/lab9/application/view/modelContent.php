@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- Model -->
-                <div class='model3D'>
+                <div class='card-body model3D'>
                     <x3d width='100%' height='100%'>
                         <scene>
                             <inline url='<?= htmlspecialchars($model->path) ?>'/>
@@ -36,24 +36,27 @@
                             <?php endforeach; ?>
                         </scene>
                     </x3d>
-                </div>
-
-                <div class='card-body'>
                     <div class='card-text'>
                         <p><?= htmlspecialchars($model->description) ?></p>
                     </div>
-                    <div class='card-title'>
-                        Camera Views
-                    </div>
-                    <div class='card-text'>
-                        These buttons select a range of X3D model viewpoints.
-                    </div>
-                    <!-- Cameras -->
-                    <div class='btn-group'>
-                        <?php foreach ($viewpoints as $viewpoint): ?>
-                            <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
-                        <?php endforeach ?>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='card'>
+            <div class='card-title'>
+                Camera Views
+            </div>
+            <div class='card-text'>
+                These buttons select a range of X3D model viewpoints.
+            </div>
+            <div class='card-body'>
+
+                <!-- Cameras -->
+                <div class='btn-group'>
+                    <?php foreach ($viewpoints as $viewpoint): ?>
+                        <a class="btn btn-primary btn-responsive camera-font" onclick="document.getElementById('<?= htmlspecialchars($viewpoint['id']) ?>').setAttribute('set_bind','true');"><?= htmlspecialchars($viewpoint['description']) ?></a>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
