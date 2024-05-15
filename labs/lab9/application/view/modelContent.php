@@ -82,6 +82,7 @@
 
         <div class='row'>
             <div class='col-xs-12 col-sm-12'>
+                <?php foreach ($cards as $card): ?>
                 <div class='card'>
                     <div class='card-body'>
                         <div class='card-title'>
@@ -96,6 +97,7 @@
                         <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
