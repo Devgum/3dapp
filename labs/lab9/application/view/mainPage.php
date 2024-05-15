@@ -16,12 +16,12 @@
     <?php include './application/view/footer.php'?>
     <!-- Scripts -->
     <!-- Placing scripts at tail of the body can reduce the lag caused by the scripts loading-->
-    <script src="application/js/jquery-3.7.1.js" defer></script>
-    <script src="application/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://kit.fontawesome.com/5b09a8cf4e.js" crossorigin="anonymous" defer></script>
-    <script src="application/js/x3dom-full.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
-    <script src="application/js/custom.js" defer></script>
+    <script src="application/js/jquery-3.7.1.js"></script>
+    <script src="application/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5b09a8cf4e.js" crossorigin="anonymous"></script>
+    <script src="application/js/x3dom-full.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="application/js/custom.js"></script>
     <script src="application/js/switch_home_model.js"></script>
 </body>
 </html>

@@ -1,28 +1,65 @@
 @font-face {
     font-family: lokicola;
-    src: url(../assets/fonts/LOKICOLA.TTF);
+    src: url(./assets/fonts/LOKICOLA.TTF);
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(../assets/fonts/OpenSans-Regular.ttf);
+    src: url(./assets/fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
     font-family: Oswald;
-    src: url(../assets/fonts/Oswald-Regular.ttf);
+    src: url(./assets/fonts/Oswald-Regular.ttf);
+}
+
+.logo {
+    margin-top: 3px;
+}
+
+.logo h1 {
+    font-family: lokicola;
+    font-size: 31px;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    float: left;
+    /* Give a 0 value, because there will be some defaut value which is not 0 */
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+}
+
+.logo h2 {
+    font-family: lokicola;
+    font-size: 31px;
+    margin-top: -6px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+}
+
+.logo h3 {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding-top: 0px;
+    padding-left: 0px;
+    float: left;
+}
+
+.logo p {
+    font-size: 7px;
+    margin-top: 22px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 3px;
 }
 
 .bg-red {
-    background-color: #FF0000; /* Coca-Cola red */
-}
-
-.navbar-brand img {
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #FF0000;
 }
 
 .nav-link {
