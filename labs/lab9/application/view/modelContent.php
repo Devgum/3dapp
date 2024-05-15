@@ -1,6 +1,6 @@
 <div class="container-fluid mt-5 main_contents">
     <div class='row'>
-        <div class='col-sm-8'>
+        <div class='col-sm-10'>
             <div class='card text-left'>
                 <!-- Model Selection -->
                 <div class='card-header'>
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class='col-sm-4'>
+        <div class='col-sm-2'>
             <div class='card'>
                 <div class='card-title'>
                     Camera Views
