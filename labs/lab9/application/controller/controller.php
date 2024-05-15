@@ -26,9 +26,9 @@ class Controller {
     function modelContent() {
         $data = null;
         if (array_key_exists('brand_id', $_GET)) {
-            $data = $this->model->getBrandModel($_GET['brand_id']);
+            $data = $this->model->modelContentData($_GET['brand_id']);
         } else {
-            $data = $this->model->getBrandModel(1);
+            $data = $this->model->modelContentData(1);
         }
         $this->load->view('modelContent', $data);
     }
