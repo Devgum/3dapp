@@ -31,7 +31,7 @@
                                     position='<?= $viewpoints['position'] ?>'
                                     orientation='<?= $viewpoints['orientation'] ?>'
                                     zNear='<?= $viewpoints['zNear'] ?>'
-                                    zFar='<?= $viewpoints'[zFar]' ?>'
+                                    zFar='<?= $viewpoints['zFar'] ?>'
                                     description='<?= $viewpoints['description'] ?>'>
                             <?php endforeach; ?>
                         </scene>
