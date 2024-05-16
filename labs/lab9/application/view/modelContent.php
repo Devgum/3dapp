@@ -1,6 +1,6 @@
 <div class="container-fluid main_contents dark_1">
     <div class='row'>
-        <div class='col-sm-5'>
+        <div class='col-xl-5 col-md-12'>
             <div class='card text-left dark_2'>
                 <!-- Model Selection -->
                 <div class='card-header'>
@@ -42,9 +42,9 @@
             </div>
         </div>
 
-        <div class='col-sm-7'>
+        <div class='col-xl-7 col-md-12'>
             <div class='row'>
-                <div class='col-sm-12'>
+                <div class='col-xl-12'>
                     <div class='card text-center dark_2'>
                         <div class='card-header'>
                             <h3>Image Gallery</h3>
@@ -64,8 +64,8 @@
                     </div>
                 </div>
             </div>
-            <div class='row mt-5'>
-                <div class='col-sm-7'>
+            <div class='row'>
+                <div class='col-xl-12 mt-5'>
                     <div class='card text-center dark_2'>
                         <div class='card-header'>
                             <h3>Camera Views</h3>
@@ -80,59 +80,55 @@
                         </div>
                     </div>
                 </div>
-                <div class='col-sm-5'>
-                    <div class="card text-center dark_2">
-                        <div class="card-header">
-                            <h3>Animation Options</h3>
+                <div class='row'>
+                    <div class='col-xl-6 mt-5'>
+                        <div class="card text-center dark_2">
+                            <div class="card-header">
+                                <h3>Animation Options</h3>
+                            </div>
+                            <div class="card-text">
+                                <p>These buttons select a range of X3D animation options</p>
+                            </div>
+                            <div class='card-body btn-group'>
+                                <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('rotx_btn');">RotX</a>
+                                <a id='stop_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('stop_btn');">Stop</a>
+                            </div>
                         </div>
-                        <div class="card-text">
-                            <p>These buttons select a range of X3D animation options</p>
-                        </div>
-                        <div class='card-body btn-group'>
-                            <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('rotx_btn');">RotX</a>
-                            <a id='roty_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('roty_btn');">RotY</a>
-                            <a id='rotz_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('rotz_btn');">RotZ</a>
-                            <a id='stop_btn' href="#" class="btn btn-primary btn-responsive" onclick="toggle_active_btn('stop_btn');">Stop</a>
+                    </div>
+                    <div class='col-xl-6 mt-5'>
+                        <div class="card text-center dark_2">
+                            <div class="card-header">
+                                <h3>Light Options</h3>
+                            </div>
+                            <div class="card-text">
+                                <p>These buttons select a range of X3D light options</p>
+                            </div>
+                            <div class='card-body btn-group'>
+                                <a id='omnilight_btn' class="btn btn-primary btn-responsive" href="#" onclick="omniLight();toggle_active_btn('omnilight_btn');">Onmi On/Off</a>
+                                <a id='headlight_btn' class="btn btn-primary btn-responsive" href="#" onclick="headLight();toggle_active_btn('headlight_btn');">Headlight On/Off</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class='row mt-5'>
-                <div class='col-sm-5'>
-                    <div class="card text-center dark_2">
-                        <div class="card-header">
-                            <h3>Light Options</h3>
-                        </div>
-                        <div class="card-text">
-                            <p>These buttons select a range of X3D light options</p>
-                        </div>
-                        <div class='card-body btn-group'>
-                            <a id='headlight_btn' class="btn btn-primary btn-responsive" href="#" onclick="headLight();toggle_active_btn('headlight_btn');">Default</a>
-                            <a id='omnilight_btn' class="btn btn-primary btn-responsive" href="#" onclick="omniLight();toggle_active_btn('omnilight_btn');">Onmi On/Off</a>
-                            <a id='targetlight_btn' class="btn btn-primary btn-responsive" href="#" onclick="targetLight();toggle_active_btn('targetlight_btn');">Target On/Off</a>
-                            <a id='headlight_btn' class="btn btn-primary btn-responsive" href="#" onclick="headLight();toggle_active_btn('headlight_btn');">Headlight On/Off</a>
-                        </div>
+        </div>
+        <div class='col-xl-12 mt-5'>
+        <?php foreach ($cards as $card): ?>
+            <div class='card dark_2'>
+                <div class='card-body'>
+                    <div class='card-title'>
+                        <h2><?= htmlspecialchars($card->title) ?></h2>
                     </div>
-                </div>
-                <div class='col-sm-7'>
-                <?php foreach ($cards as $card): ?>
-                    <div class='card dark_2'>
-                        <div class='card-body'>
-                            <div class='card-title'>
-                                <h2><?= htmlspecialchars($card->title) ?></h2>
-                            </div>
-                            <div class='card-text'>
-                                <h3><?= htmlspecialchars($card->subtitle) ?></h3>
-                            </div>
-                            <div>
-                                <p><?= htmlspecialchars($card->description) ?></p>
-                            </div>
-                            <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
-                        </div>
+                    <div class='card-text'>
+                        <h3><?= htmlspecialchars($card->subtitle) ?></h3>
                     </div>
-                <?php endforeach; ?>
+                    <div>
+                        <p><?= htmlspecialchars($card->description) ?></p>
+                    </div>
+                    <a href="<?= htmlspecialchars($card->link) ?>" class="btn btn-primary">Find out more...</a>
                 </div>
             </div>
+        <?php endforeach; ?>
         </div>
     </div>
 </div>
