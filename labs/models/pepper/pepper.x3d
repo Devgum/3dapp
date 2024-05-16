@@ -6,16 +6,29 @@
         <meta name="generator" content="Blender 3.6.4" />
     </head>
     <Scene>
-        <NavigationInfo headlight="true"
+        <NavigationInfo DEF='headlight'
+                        headlight="true"
                         visibilityLimit="0.0"
                         type='"EXAMINE", "ANY"'
                         avatarSize="0.25, 1.75, 0.75"
                         />
+        <PointLight DEF='omni_1' intensity='0.4' location='-1860 1456 -1416' radius='10750'/>
+        <PointLight DEF='omni_2' intensity='0.4' location='1940 1456 -1404' radius='10750'/>
+        <PointLight DEF='omni_3' intensity='0.4' location='-9.502 1456 1745' radius='10750'/>
+        <PointLight DEF='omni_4' intensity='0.4' location='11.65 -1231 -1432' radius='10750'/>
+        <PointLight DEF='omni_5' intensity='0.4' location='1945 -1189 1764' radius='10750'/>
+        <PointLight DEF='omni_6' intensity='0.4' location='-1931 -1189 1790' radius='10750'/>
+
         <Transform DEF="Cylinder_TRANSFORM"
                    translation="0.000000 0.000000 0.000000"
                    scale="1.000000 1.000000 1.000000"
                    rotation="0.000000 0.707107 0.707107 3.141593"
                    >
+           <timeSensor DEF='RotationTimer' cycleInterval='4' loop='true' enabled='false'></timeSensor>
+            <orientationInterpolator DEF='Rotator' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0 0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+            <ROUTE fromNode='RotationTimer' fromField='fraction_changed' toNode='Rotator' toField='set_fraction'></ROUTE>
+            <ROUTE fromNode='Rotator' fromField='value_changed' toNode='Cylinder_TRANSFORM' toField='set_rotation'></ROUTE>
+
             <Transform DEF="Cylinder_ifs_TRANSFORM"
                        translation="0.000000 0.000000 0.000000"
                        scale="1.000000 1.000000 1.000000"
