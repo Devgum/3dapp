@@ -11,7 +11,7 @@ function spin(axis = 'z', key_no = 5) {
     if (!axis_map.hasOwnProperty(axis)) axis = 'z';
     keyframes = []
     for (i = 0; i < key_no; i++) {
-        keyframe = axis_map[axis] + ' ' + pi * 0.5 * i;
+        keyframe = axis_map[axis] + ' ' + (pi * 0.5 * i).toFixed(3);
         keyframes.push(keyframe);
     }
     document.getElementById('model__Rotator').setAttribute('keyValue', keyframes);
