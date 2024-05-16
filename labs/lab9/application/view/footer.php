@@ -7,7 +7,7 @@
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
             <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
             <a href="#" aria-label="Google Plus"><i class="fab fa-google-plus fa-2x"></i></a>
-            <a href="#" aria-label="Github"><i class="fab fa-github-square fa-2x"></i></a>
+            <a href="https://github.com/devgum/3dapp/tree/main/labs" aria-label="Github"><i class="fab fa-github-square fa-2x"></i></a>
         </div>
     </div>
 </footer>
