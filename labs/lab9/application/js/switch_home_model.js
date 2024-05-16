@@ -35,6 +35,7 @@ function switch_to(content_api, brand_id = 0) {
             response = xmlHttp.responseText;
             document.getElementById('content').innerHTML = response;
             x3dom.reload();
+            Fancybox.bind('[data-fancybox]', {});
         }
     }
 }
