@@ -55,7 +55,7 @@
 
                             foreach ($images as $image):
                             ?>
-                                <a href='<?= htmlspecialchars($image) ?>'>
+                                <a href='<?= htmlspecialchars($image) ?>' data-fancybox data-caption='Gallery Image'>
                                     <img src='<?= htmlspecialchars($image) ?>' class='card-img-top gallery img-thumbnail'/>
                                 </a>
                             <?php endforeach; ?>
