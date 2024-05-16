@@ -106,7 +106,7 @@
                                 <p>These buttons select a range of X3D light options</p>
                             </div>
                             <div class='card-body btn-group'>
-                                <a id='omnilight_btn' class="btn btn-primary btn-responsive" href="#" onclick="omniLight();toggle_active_btn('omnilight_btn');">Onmi On/Off</a>
+                                <a id='omnilight_btn' class="btn btn-primary btn-responsive" href="#" onclick="omniLight();toggle_active_btn('omnilight_btn');">Omni On/Off</a>
                                 <a id='headlight_btn' class="btn btn-primary btn-responsive" href="#" onclick="headLight();toggle_active_btn('headlight_btn');">Headlight On/Off</a>
                             </div>
                         </div>
