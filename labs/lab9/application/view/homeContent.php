@@ -8,7 +8,7 @@
     </section>
     <div class='row mt-3'>
         <?php foreach ($cards as $card): ?>
-        <div class='col-sm-4'>
+        <div class='col-xl-4 col-12'>
             <div class='card dark_2'>
                 <a href='javascript:switch_to(model_content, <?= htmlspecialchars($card->brand_id) ?>)'>
                     <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>

@@ -132,6 +132,7 @@
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
+  border-color: white;
   border-radius: 0.25rem; }
   .navbar-toggler:hover, .navbar-toggler:focus {
     text-decoration: none; }
@@ -144,7 +145,7 @@
   height: 1.5em;
   vertical-align: middle;
   content: "";
-  background: no-repeat center center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   background-size: 100% 100%; }
 
 .main-showcase {
@@ -156,7 +157,7 @@
 .info {
     float: left;
     margin: 5%;
-    max-width: 30%;
+    max-width: 60%;
     display: block;
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
@@ -165,13 +166,13 @@
 
 .info h2 {
     color: rgba(0,102,153,1);
-    font-size: 50px;
+    font-size: 35px;
     margin-top: 0px;
     margin-bottom: 5px;
 }
 
 .info h3 {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -210,4 +211,20 @@ footer .social a {
 
 footer .social a:hover {
     color: #ddd;
+}
+
+/* X-Large Devices */
+@media (min-width: 1200px) {
+    .info {
+        width: 30%;
+    }
+    .info h2 {
+        font-size: 50px;
+    }
+    .info h3 {
+        font-size: 30px;
+    }
+    .info p {
+        font-size: 15px;
+    }
 }
