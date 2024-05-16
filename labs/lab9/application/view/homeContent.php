@@ -10,8 +10,13 @@
         <?php foreach ($cards as $card): ?>
         <div class='col-xl-4 col-12'>
             <div class='card dark_2'>
-                <a href='<?= htmlspecialchars($card->render_path) ?>' data-fancybox data-caption='Render Image' class="thumbnail">
+                <a href='<?= htmlspecialchars($card->render_path) ?>' data-fancybox data-caption='Render Image'>
                     <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>
+                    <script>
+                        Fancybox.bind('[data-fancybox]', {
+                            // Your custom options
+                        });    
+                    </script>
                 </a>
                 <div class='card-body'>
                     <h2 class="card-title"><?= htmlspecialchars($card->title) ?></h2>
