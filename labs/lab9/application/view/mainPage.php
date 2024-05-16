@@ -19,7 +19,7 @@
     <script src="application/js/jquery-3.7.1.js"></script>
     <script src="application/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/5b09a8cf4e.js" crossorigin="anonymous"></script>
-    <script src="application/js/x3dom-full.js"></script>
+    <script src="application/js/x3dom.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="application/js/btn_group_toggle.js"></script>
     <script src="application/js/model_interactions.js"></script>
