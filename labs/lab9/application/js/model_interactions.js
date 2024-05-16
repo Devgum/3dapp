@@ -14,7 +14,7 @@ function animate(axis = 'z', key_no = 5) {
         keyframe = axis_map[axis] + ' ' + pi * 0.5 * i;
         keyframes.push(keyframe);
     }
-    document.getElementById('model_Rotator').setAttribute('keyValue', keyframes);
+    document.getElementById('model__Rotator').setAttribute('keyValue', keyframes);
     document.getElementById('model__RotationTimer').setAttribute('enabled', animating.toString());
 }
 

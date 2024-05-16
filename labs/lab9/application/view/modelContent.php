@@ -91,8 +91,8 @@
                             </div>
                             <div class='card-body btn-group'>
                                 <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="animate('x');toggle_active_btn('rotx_btn');">RotX</a>
-                                <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="animate('x');toggle_active_btn('rotx_btn');">RotY</a>
-                                <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="animate('x');toggle_active_btn('rotx_btn');">RotZ</a>
+                                <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="animate('y');toggle_active_btn('rotx_btn');">RotY</a>
+                                <a id='rotx_btn' href="#" class="btn btn-primary btn-responsive" onclick="animate('z');toggle_active_btn('rotx_btn');">RotZ</a>
                                 <a id='stop_btn' href="#" class="btn btn-primary btn-responsive" onclick="stop();toggle_active_btn('stop_btn');">Stop</a>
                             </div>
                         </div>
