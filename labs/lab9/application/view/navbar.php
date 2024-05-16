@@ -33,7 +33,7 @@
             </li>
         </ul>
     </div>
-    <div class="modal fade" id="contactModal">
+    <div class="modal" id="contactModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
