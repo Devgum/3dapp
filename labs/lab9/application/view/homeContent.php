@@ -10,7 +10,7 @@
         <?php foreach ($cards as $card): ?>
         <div class='col-xl-4 col-12'>
             <div class='card dark_2'>
-                <a href='javascript:switch_to(model_content, <?= htmlspecialchars($card->brand_id) ?>)'>
+                <a href='<?= htmlspecialchars($card->render_path) ?>' data-fancybox data-caption='Render Image'>
                     <img class='card-img-top img-fluid img-thumbnail' src='<?= htmlspecialchars($card->image_path)?>'>
                 </a>
                 <div class='card-body'>

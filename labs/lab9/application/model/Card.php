@@ -10,6 +10,7 @@ class Card extends BaseDAO {
         'subtitle' => 'TEXT',
         'description' => 'TEXT',
         'image_path' => 'TEXT',
+        'render_path' => 'TEXT',
         'link' => 'TEXT',
     ];
 
@@ -20,6 +21,7 @@ class Card extends BaseDAO {
     public $subtitle;
     public $description;
     public $image_path;
+    public $render_path;
     public $link;
 }
 ?>
