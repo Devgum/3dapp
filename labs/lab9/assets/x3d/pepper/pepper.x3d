@@ -24,6 +24,11 @@
                    scale="1.000000 1.000000 1.000000"
                    rotation="0.000000 0.707107 0.707107 3.141593"
                    >
+           <timeSensor DEF='RotationTimer' cycleInterval='4' loop='true' enabled='false'></timeSensor>
+            <orientationInterpolator DEF='Rotator' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0 0 1 0 1.57079 0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+            <ROUTE fromNode='RotationTimer' fromField='fraction_changed' toNode='Rotator' toField='set_fraction'></ROUTE>
+            <ROUTE fromNode='Rotator' fromField='value_changed' toNode='Cylinder_TRANSFORM' toField='set_rotation'></ROUTE>
+
             <Transform DEF="Cylinder_ifs_TRANSFORM"
                        translation="0.000000 0.000000 0.000000"
                        scale="1.000000 1.000000 1.000000"
