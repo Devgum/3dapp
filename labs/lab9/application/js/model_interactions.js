@@ -36,7 +36,7 @@ function headLight() {
 function omniLight() {
     omnilight = !omnilight;
     for (i = 1; i <= omni_no; i++) {
-        omni_id = 'model_omni_' + i;
+        omni_id = 'model__omni_' + i;
         document.getElementById(omni_id).setAttribute('enabled', omnilight.toString());
     }
 }
