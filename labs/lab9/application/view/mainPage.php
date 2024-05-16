@@ -21,7 +21,8 @@
     <script src="https://kit.fontawesome.com/5b09a8cf4e.js" crossorigin="anonymous"></script>
     <script src="application/js/x3dom-full.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="application/js/custom.js"></script>
+    <script src="application/js/btn_group_toggle.js"></script>
+    <script src="application/js/model_interactions.js"></script>
     <script src="application/js/switch_home_model.js"></script>
 </body>
 </html>
