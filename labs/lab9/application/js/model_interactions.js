@@ -6,7 +6,7 @@ var axis_map = {
 }
 pi = 3.14159
 
-function animate(axis = 'z', key_no = 5) {
+function spin(axis = 'z', key_no = 5) {
     animating = !animating;
     if (!axis_map.hasOwnProperty(axis)) axis = 'z';
     keyframes = []
