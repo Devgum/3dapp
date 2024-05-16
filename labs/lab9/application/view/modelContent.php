@@ -1,6 +1,6 @@
 <div class="container-fluid main_contents dark_1">
     <div class='row'>
-        <div class='col-xl-5 col-md-12'>
+        <div class='col-xl-5 col-md-12 mb-5'>
             <div class='card text-left dark_2'>
                 <!-- Model Selection -->
                 <div class='card-header'>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class='col-xl-6 mt-5'>
+                    <div class='col-xl-6 mt-5 mb-5'>
                         <div class="card text-center dark_2">
                             <div class="card-header">
                                 <h3>Light Options</h3>
@@ -112,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class='col-xl-12 mt-5'>
+        <div class='col-xl-12'>
         <?php foreach ($cards as $card): ?>
             <div class='card dark_2'>
                 <div class='card-body'>
