@@ -29,7 +29,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
             </li>
         </ul>
     </div>
